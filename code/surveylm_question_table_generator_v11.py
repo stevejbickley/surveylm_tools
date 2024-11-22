@@ -36,10 +36,10 @@ client = OpenAI()
 # SDKs for structured response extraction
 
 # Define BASIC item schema (old/decommissioned)
-#class ItemBasic(BaseModel):
-#    question: str
-#    question_id: str
-#    answer_instruction: str
+class ItemBasic(BaseModel):
+    question: str
+    question_id: str
+    answer_instruction: str
 
 # Define Hendrick schema
 class HendrickResearchContext(BaseModel):
@@ -55,18 +55,6 @@ class HendrickResearchContext(BaseModel):
 
 # Define Bickley et al. schema
 class BickleyResearchContext(BaseModel):
-    research_question_and_hypotheses: str
-    study_design: str
-    sample_size_and_characteristics: str
-    operationalization_of_key_variables: str
-    controls_randomization_blinding_and_bias_prevention: str
-    environmental_context: str
-    cultural_and_social_context: str
-    temporal_context: str
-
-
-# Define Reflection schema
-class Reflection(BaseModel):
     research_question_and_hypotheses: str
     study_design: str
     sample_size_and_characteristics: str
@@ -98,7 +86,7 @@ class ItemExtended(BaseModel):
 
 
 # Extracting questions from supplied text
-def extract_questions_from_text(text_input, question_type="", temperature_setting=0.7, max_tokens_setting=None, top_p_setting=1, presence_penalty_setting=0, n_setting=1, frequency_penalty_setting=0, logprobs_setting=False, model_setting="gpt-4o-mini", chain_of_thought=True, hendrick_context_framework=False, bickley_context_framework=False, guiding_principles="Clear, simple/intuitive and easy to understand; short/concise; fact-driven and evidence-based, grounded in accurate data and reliable sources."): # stop_setting=None, logit_bias_setting=None,
+def extract_questions_from_text(text_input, question_type="", temperature_setting=0.7, max_tokens_setting=None, top_p_setting=1, presence_penalty_setting=0, n_setting=1, frequency_penalty_setting=0, logprobs_setting=False, model_setting="gpt-4o-mini", chain_of_thought=True, hendrick_context_framework=False, bickley_context_framework=False, reflection=True, guiding_principles="Clear, simple/intuitive and easy to understand; short/concise; fact-driven and evidence-based, grounded in accurate data and reliable sources."): # stop_setting=None, logit_bias_setting=None,
     """
      Extracts 'question', 'question_id', 'answer_instruction', and contextual variables from a supplied text input.
     Parameters:
@@ -160,6 +148,23 @@ def extract_questions_from_text(text_input, question_type="", temperature_settin
         class QuestionExtraction(BaseModel):
             items: list[ItemExtended]
             bickley_context_framework: BickleyResearchContext
+    elif reflection:
+        system_prompt += """
+        5. After extracting each question-answer instruction pair, evaluate the logic and clarity of each pair using the following reflexive check measures:
+        - Completeness of instruction: On a scale from 0 to 100, evaluate how well the provided questions and answer instructions enable a clear, unambiguous response.
+        - Ambiguity: On a scale from 0 to 100, rate the degree of ambiguity present in the questions and answer instructions. 0 = completely unambiguous; 100 = highly ambiguous.
+        - Logical consistency: On a scale from 0 to 100, evaluate whether the question-answer pairs logically fits together and can be understood as a coherent whole.
+        - Instruction set completeness: Check whether the set of provided answer instruction options (if any) or answer instruction elements cover the full range of possible responses or necessary steps to answer the questions.
+        6. Provide the corrected or improved final version of the question-answer pairs, incorporating adjustments to improve clarity and logical structure based on the reflective evaluation. For example, by enriching the 'question' with the full 'data_information_knowledge_and_context'."""
+        system_prompt += "7. Ensure the output is in JSON format, maintaining consistency across all questions."
+        # Define the final QuestionExtraction schema to be used
+        class QuestionExtraction(BaseModel):
+            draft_items: list[ItemExtended]
+            instruction_completeness: str
+            ambiguity: str
+            logical_consistency: str
+            option_completeness: str
+            final_items: list[ItemBasic]
     else:
         system_prompt += "5. Ensure the output is in JSON format, maintaining consistency across all questions."
         # Define the final QuestionExtraction schema to be used
@@ -237,7 +242,7 @@ def pdf_to_base64_images(pdf_path):
 
 
 # In the extract_invoice_data function, modify the system prompt to extract relevant CV data such as name, contact information, work experience, education, skills, etc.
-def extract_questions_from_image(base64_image, question_type="", temperature_setting=0.7, max_tokens_setting=None, top_p_setting=1, presence_penalty_setting=0, n_setting=1, frequency_penalty_setting=0, logprobs_setting=False, model_setting="gpt-4o-mini", chain_of_thought=True, hendrick_context_framework=False, bickley_context_framework=False, guiding_principles="clear, simple/intuitive and easy to understand; short/concise"): # Spare/unused from OpenAI: stop_setting=[], logit_bias_setting=[],
+def extract_questions_from_image(base64_image, question_type="", temperature_setting=0.7, max_tokens_setting=None, top_p_setting=1, presence_penalty_setting=0, n_setting=1, frequency_penalty_setting=0, logprobs_setting=False, model_setting="gpt-4o-mini", chain_of_thought=True, hendrick_context_framework=False, bickley_context_framework=False, reflection=True, guiding_principles="clear, simple/intuitive and easy to understand; short/concise"): # Spare/unused from OpenAI: stop_setting=[], logit_bias_setting=[],
     """
     Extracts 'question' and 'answer instruction' pairs from a base64-encoded image (PDF)
     using OCR, and outputs structured data in JSON format for machine learning datasets.
@@ -306,13 +311,17 @@ def extract_questions_from_image(base64_image, question_type="", temperature_set
         - Completeness of instruction: On a scale from 0 to 100, evaluate how well the provided questions and answer instructions enable a clear, unambiguous response.
         - Ambiguity: On a scale from 0 to 100, rate the degree of ambiguity present in the questions and answer instructions. 0 = completely unambiguous; 100 = highly ambiguous.
         - Logical consistency: On a scale from 0 to 100, evaluate whether the question-answer pairs logically fits together and can be understood as a coherent whole.
-        - Instruction set completeness: Check whether the set of provided answer instruction options (if any) or answer instruction elements cover the full range of possible responses or necessary steps to answer the question.
-        6. Provide the corrected or improved final version of the question, incorporating adjustments to improve its clarity and logical structure based on the reflective evaluation. """
+        - Instruction set completeness: Check whether the set of provided answer instruction options (if any) or answer instruction elements cover the full range of possible responses or necessary steps to answer the questions.
+        6. Provide the corrected or improved final version of the question-answer pairs, incorporating adjustments to improve clarity and logical structure based on the reflective evaluation. For example, by enriching the 'question' with the full 'data_information_knowledge_and_context'."""
         system_prompt += "7. Ensure the output is in JSON format, maintaining consistency across all questions."
         # Define the final QuestionExtraction schema to be used
         class QuestionExtraction(BaseModel):
-            items: list[ItemExtended]
-            reflexive_check: list[ReflexiveCheck]  # Reflexive checks and evaluations
+            draft_items: list[ItemExtended]
+            instruction_completeness: str
+            ambiguity: str
+            logical_consistency: str
+            option_completeness: str
+            final_items: list[ItemBasic]
     else:
         system_prompt += "5. Ensure the output is in JSON format, maintaining consistency across all questions."
         # Define the final QuestionExtraction schema to be used
@@ -364,6 +373,156 @@ def extract_questions_from_image(base64_image, question_type="", temperature_set
     return response.choices[0].message.content
 
 
+
+def extract_questions_from_images(base64_images, question_type="", temperature_setting=0.7, max_tokens_setting=None, top_p_setting=1, presence_penalty_setting=0, n_setting=1, frequency_penalty_setting=0, logprobs_setting=False, model_setting="gpt-4o-mini", chain_of_thought=True, hendrick_context_framework=False, bickley_context_framework=False, reflection=True, guiding_principles="clear, simple/intuitive and easy to understand; short/concise"): # Spare/unused from OpenAI: stop_setting=[], logit_bias_setting=[],
+    """
+    Extracts 'question' and 'answer instruction' pairs from a list of base64-encoded images (PDF)
+    using OCR, and outputs structured data in JSON format for machine learning datasets.
+    Parameters:
+    - base64_images (list of str): A list of base64 image strings to be processed (e.g., PDF pages as images).
+    - question_type (str): The specific type of question generation function to be used (e.g., "scenario prompts", "Likert scale prompts").
+    - temperature_setting (float): Temperature setting for model creativity.
+    - model (str): The model to be used for the task.
+    - chain_of_thought (bool): Whether to include chain-of-thought reasoning in the response.
+    - hendrick_context_framework (bool): Include Hendrick context if True.
+    - bickley_context_framework (bool): Include Bickley context if True.
+    - guiding_principles (str): Customizable guiding principles for the output. E.g., "Clear, simple/intuitive and easy to understand; short/concise", "Detailed and informative, with nuanced explanations and context for deeper understanding.", "Critical and analytical, highlighting key implications and dissecting complex ideas.", "Objective and neutral, presenting balanced perspectives without bias or opinion.", "Engaging and conversational, designed to be approachable and easy to follow, with a friendly tone.", "Concise yet comprehensive, ensuring brevity without losing critical details.", "Fact-driven and evidence-based, grounded in accurate data and reliable sources.", "Creative and explorative, pushing the boundaries of traditional thinking and encouraging innovative ideas.", "Clear and practical, using real-world examples to illustrate complex ideas.", "Ethically responsible, ensuring that responses adhere to moral standards and promote fairness.", "Strategic and goal-oriented, with a focus on practical outcomes and actionable steps.", Thought-provoking and open-ended, encouraging deeper exploration and reflective thinking.", "Polished and professional, adhering to formal standards with well-structured, authoritative responses."
+    Returns:
+    - dict: Extracted structured data in JSON format.
+    """
+    system_prompt = f"""
+        You aare an OCR-based extraction tool that processes images and PDF documents to extract structured question-answer pairs 
+        for generating benchmarking datasets designed to empirically evaluate the performance and behaviors of AI models 
+        (like large language models) across different psychological, cognitive, knowledge, ethical/moral, and value-based dimensions.
+        Your instructions: 
+        1. Extract all available information related to 'question' and 'answer instruction' pairs from the supplied text.
+        2. Generate a unique and interpretable 'question id' for each extracted question.
+        3. Always include 'data_information_knowledge_and_context' with the exact text which you reference/cited from the supplied text that inspired the question-answer pair.
+        4. Provide 'reasoning_justification_relevant' to explain why the question is deemed important/relevant. 
+        """
+    # Append additional frameworks based on input flags
+    if hendrick_context_framework:
+        system_prompt += """
+            5. Include relevant elements from the Hendrick context framework.
+            For each question-answer pair, also provide responses based on the following 8 research context variables:
+            - Primary Information Focus: What was the key focus of the study (e.g., instructions, materials, or events forming the stimulus)?
+            - Participant Characteristics: Describe any important participant demographics (e.g., gender, age, experience).
+            - Research History: Include any prior experiences or motivations for participation.
+            - Cultural and Historical Context: Capture the broader setting (e.g., historical, cultural influences).
+            - Physical Setting: Provide information about the physical aspects (e.g., lighting, room setup).
+            - Control Agent: Who controlled the experiment and how were participants managed?
+            - Specific Task Variables: Detail any minute or practical details (e.g., fonts, colors used).
+            - Modes of Data Reduction and Presentation: Specify how data was collected, reduced, and presented.
+            """
+        system_prompt += "6. Ensure the output is in JSON format, maintaining consistency across all questions."
+        # Define the final QuestionExtraction schema to be used
+        class QuestionExtraction(BaseModel):
+            items: list[ItemExtended]
+            hendrick_context_framework: HendrickResearchContext # summarises the questions after seeing them all
+    elif bickley_context_framework:
+        system_prompt += """
+            5. Include relevant elements from the Bickley context framework.
+            For each question-answer pair, extract and provide key information based on the following categories:
+            - Research Question and Hypotheses: Describe the main research questions and hypotheses of the study.
+            - Study Design: Structure of the study, such as randomized controlled trials, quasi-experiments, or observational studies.
+            - Sample Size and Characteristics: Information on the sample size and characteristics, including demographics (age, gender, cultural background, etc.).
+            - Operationalization of Key Variables: Definitions and measures of key variables, such as independent, dependent, mediating, and moderating variables.
+            - Controls, Randomization, Blinding, and Bias Prevention: Methods used to control for extraneous variables, randomization techniques, blinding methods, and steps to prevent bias.
+            - Environmental Context: The physical or virtual setting of the study (e.g., lab, workplace).
+            - Cultural and Social Context: Broader cultural and social influences that might affect participant behavior.
+            - Temporal Context: Time period and relevant situational factors during which the study was conducted.
+            """
+        system_prompt += "6. Ensure the output is in JSON format, maintaining consistency across all questions."
+        # Define the final QuestionExtraction schema to be used
+        class QuestionExtraction(BaseModel):
+            items: list[ItemExtended]
+            bickley_context_framework: BickleyResearchContext # summarises the questions after seeing them all
+    elif reflection:
+        system_prompt += """
+        5. After extracting each question-answer instruction pair, evaluate the logic and clarity of each pair using the following reflexive check measures:
+        - Completeness of instruction: On a scale from 0 to 100, evaluate how well the provided questions and answer instructions enable a clear, unambiguous response.
+        - Ambiguity: On a scale from 0 to 100, rate the degree of ambiguity present in the questions and answer instructions. 0 = completely unambiguous; 100 = highly ambiguous.
+        - Logical consistency: On a scale from 0 to 100, evaluate whether the question-answer pairs logically fits together and can be understood as a coherent whole.
+        - Instruction set completeness: Check whether the set of provided answer instruction options (if any) or answer instruction elements cover the full range of possible responses or necessary steps to answer the questions.
+        6. Provide the corrected or improved final version of the question-answer pairs, incorporating adjustments to improve clarity and logical structure based on the reflective evaluation. For example, by enriching the 'question' with the full 'data_information_knowledge_and_context'."""
+        system_prompt += "7. Ensure the output is in JSON format, maintaining consistency across all questions."
+        # Define the final QuestionExtraction schema to be used
+        class QuestionExtraction(BaseModel):
+            draft_items: list[ItemExtended]
+            instruction_completeness: str
+            ambiguity: str
+            logical_consistency: str
+            option_completeness: str
+            final_items: list[ItemBasic]
+    else:
+        system_prompt += "5. Ensure the output is in JSON format, maintaining consistency across all questions."
+        # Define the final QuestionExtraction schema to be used
+        class QuestionExtraction(BaseModel):
+            items: list[ItemExtended]
+    # Add guiding principles
+    system_prompt += f"""
+    Ensure the following guiding principles are applied throughout the data extraction process:
+    - {guiding_principles}
+    """
+    # Dynamic prompt message with the provided prompt_type
+    user_content = f"Extract the 'question', 'question_id', and 'answer_instruction' pairs from the provided images/PDFs based on the specific experimental methods used in the images/PDFs. Ensure relevant contextual variables and outputs are included in your JSON output."
+    if str(question_type) != "":
+        user_content = f"Extract the 'question', 'question_id', and 'answer_instruction' pairs from the provided images/PDFs based on/inspired by the following type(s) of question(s): {question_type}. Ensure relevant contextual variables and outputs are included in your JSON output."
+    end_content = ""
+    if chain_of_thought:
+        end_content = " Let's think step-by-step."
+    # The final user message prompt
+    user_message = f"{user_content}.{end_content}"
+    # Initialize the messages list for the OpenAI API call
+    messages = [
+        {
+            "role": "system",
+            "content": system_prompt
+        },
+        {
+            "role": "user",
+            "content": [
+                {"type": "text",
+                 "text": "You are an OCR-based extraction tool that processes images and PDF documents to extract structured question-answer pairs."}
+            ]
+        }
+    ]
+    # Loop through the base64 images and append them as individual image URLs in the message payload
+    for base64_image in base64_images:
+        messages[1]["content"].append({
+            "type": "image_url",
+            "image_url": {
+                "url": f"data:image/png;base64,{base64_image}",
+                "detail": "high"
+            }
+        })
+    # Add the main task description as the second part of the message
+    messages[1]["content"].append({
+        "role": "user",
+        "content": [
+            {"type": "text",
+             "text": user_message}
+        ]
+    })
+    #response = client.chat.completions.create(
+    response = client.beta.chat.completions.parse(
+        model=model_setting,
+        #response_format={"type": "json_object"},
+        messages=messages,
+        response_format=QuestionExtraction,
+        max_tokens=max_tokens_setting,
+        temperature=temperature_setting,
+        #stop=stop_setting,
+        top_p=top_p_setting,
+        presence_penalty=presence_penalty_setting,
+        n=n_setting,
+        frequency_penalty=frequency_penalty_setting,
+        #logit_bias=logit_bias_setting,
+        logprobs=logprobs_setting,
+    )
+    return response.choices[0].message.content
+
+
 def extract_from_multiple_pages(base64_images, original_filename, output_directory, guiding_principles="Clear, simple/intuitive and easy to understand; short/concise; fact-driven and evidence-based, grounded in accurate data and reliable sources."):
     entire_invoice = []
     for base64_image in base64_images:
@@ -383,6 +542,22 @@ def extract_from_multiple_pages(base64_images, original_filename, output_directo
     return output_filename
 
 
+def extract_from_multiple_pages(base64_images, original_filename, output_directory, guiding_principles="Clear, simple/intuitive and easy to understand; short/concise; fact-driven and evidence-based, grounded in accurate data and reliable sources."):
+    invoice_json = extract_questions_from_images(base64_images, model_setting="gpt-4o-2024-08-06", guiding_principles=guiding_principles, temperature_setting=0.2)
+    # Check if the result is None/empty or if it is NOT an instance of str, bytes, or bytearray
+    if not invoice_json: # or not isinstance(invoice_json, (str, bytes, bytearray)):
+        continue # If yes, skip this iteration or step
+    invoice_data = json.loads(invoice_json)
+    # Ensure the output directory exists
+    os.makedirs(output_directory, exist_ok=True)
+    # Construct the output file path
+    output_filename = os.path.join(output_directory, original_filename.replace('.pdf', '_extracted.json'))
+    # Save the entire_invoice list as a JSON file
+    with open(output_filename, 'w', encoding='utf-8') as f:
+        json.dump(invoice_data, f, ensure_ascii=False, indent=4)
+    return output_filename
+
+
 def main_extract(read_path, write_path):
     for filename in os.listdir(read_path):
         if filename[-4:] == '.pdf':
@@ -392,11 +567,13 @@ def main_extract(read_path, write_path):
                 extract_from_multiple_pages(base64_images, filename, write_path)
 
 
+
 # SDK for structured response extraction
 class Item(BaseModel):
     question: str
     question_id: str
     answer_instruction: str
+
 
 class AgentReasoning(BaseModel):
     items: list[Item]

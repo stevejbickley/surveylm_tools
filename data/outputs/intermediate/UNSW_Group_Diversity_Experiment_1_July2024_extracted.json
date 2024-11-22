@@ -1,0 +1,704 @@
+[
+    {
+        "draft_items": [
+            {
+                "question": "What is the estimated survey time for the study?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide the estimated survey time in minutes as mentioned in the document.",
+                "data_information_knowledge_and_context": "The document states: 'Please ensure you can dedicate at least the next ${e://Field/estimatedSurveyTime} minutes to the study without interruptions.'",
+                "reasoning_justification_relevant": "Understanding the estimated time commitment is crucial for participants to manage their schedules and ensure they can complete the study without interruptions."
+            },
+            {
+                "question": "What is the estimated total payout for participation in the study?",
+                "question_id": "Q2",
+                "answer_instruction": "Provide the estimated total payout in AUD as mentioned in the document.",
+                "data_information_knowledge_and_context": "The document states: 'The estimated average total payout for your participation is ${e://Field/estimatedAverageTotalPayout} AUD.'",
+                "reasoning_justification_relevant": "Knowing the payout is important for participants to assess the financial incentive for their involvement in the study."
+            },
+            {
+                "question": "What is the rule regarding backtracking in the study?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the rule about backtracking as described in the document.",
+                "data_information_knowledge_and_context": "The document states: 'Once you move past a page, there's no going back. Read carefully before advancing.'",
+                "reasoning_justification_relevant": "Understanding the backtracking rule is essential for participants to know how to navigate the study and ensure they do not miss important information."
+            },
+            {
+                "question": "What does the study involve in terms of real-time interaction?",
+                "question_id": "Q4",
+                "answer_instruction": "Describe the real-time interaction component of the study as outlined in the document.",
+                "data_information_knowledge_and_context": "The document states: 'This study involves live interaction with four other anonymous participants. Be prepared for real-time engagement.'",
+                "reasoning_justification_relevant": "Participants need to be aware of the real-time interaction requirement to prepare for active engagement during the study."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the estimated survey time for the study?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide the estimated survey time in minutes as mentioned in the document."
+            },
+            {
+                "question": "What is the estimated total payout for participation in the study?",
+                "question_id": "Q2",
+                "answer_instruction": "Provide the estimated total payout in AUD as mentioned in the document."
+            },
+            {
+                "question": "What is the rule regarding backtracking in the study?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the rule about backtracking as described in the document."
+            },
+            {
+                "question": "What does the study involve in terms of real-time interaction?",
+                "question_id": "Q4",
+                "answer_instruction": "Describe the real-time interaction component of the study as outlined in the document."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the survey format and group formation process in the experimental economic game?",
+                "question_id": "Q15",
+                "answer_instruction": "Describe the survey format and group formation process, including the matching process and options in case of unsuccessful matching.",
+                "data_information_knowledge_and_context": "Q15 Survey Format and Group Formation Survey Format: First, you will participate in a two-stage experimental economic game with the other participants. After the game, you will complete a post-experimental questionnaire at your own pace. Group Formation: Matching Process: After reading the study instructions and completing a quick comprehension check, you will be matched with four other participants. This process usually takes less than a few minutes. In Case of Unsuccessful Matching: If we can’t match you successfully, you will have the choice to either quit the experiment and be redirected back to your panel provider, try again to match, or come back later and be redirected back to your panel provider.",
+                "reasoning_justification_relevant": "Understanding the survey format and group formation is crucial for participants to know how they will be grouped and what to expect if matching is unsuccessful."
+            },
+            {
+                "question": "What are the instructions for Stage 1 - Voluntary Contributions in the economic game?",
+                "question_id": "Q32_Stage1",
+                "answer_instruction": "Explain how participants decide on voluntary contributions, including the range, multiplication factor, and payoff calculation.",
+                "data_information_knowledge_and_context": "Q32 Study Instructions - Page 1 of 2 Instructions for each stage of the economic game Stage 1 - Voluntary Contributions: Decide how much to voluntarily transfer to the public account, ranging from 0 to ${e://Field/endowment_own}. All participants make this decision simultaneously and independently. The total voluntary contribution is multiplied by ${e://Field/multiplier} and then evenly distributed among the group. Your payoff: [your initial endowment] - [your contribution] + [(total group contribution) x ${e://Field/multiplier}] / 5",
+                "reasoning_justification_relevant": "Stage 1 instructions are essential for participants to understand how their voluntary contributions affect their payoff and the group's outcome."
+            },
+            {
+                "question": "What are the instructions for Stage 2 - Mandatory Contributions in the economic game?",
+                "question_id": "Q32_Stage2",
+                "answer_instruction": "Describe how participants decide on mandatory contributions, including the rate setting and payoff calculation.",
+                "data_information_knowledge_and_context": "Stage 2 - Mandatory Contributions: Decide on a mandatory contribution rate to the public account, between 0% and 100%. All participants make this decision simultaneously and independently. The final mandatory contribution rate for the group is set at the median value of all rates chosen by the participants. This means the rate that falls in the middle of all chosen rates (i.e. when ordered from lowest to highest) becomes the standard rate applied to every group member. The total mandatory contribution is processed (summed and multiplied by ${e://Field/multiplier}) similarly to Stage 1. Your payoff calculation is the same as in Stage 1.",
+                "reasoning_justification_relevant": "Stage 2 instructions are important for participants to understand how mandatory contributions are determined and how they impact the group's dynamics and individual payoffs."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the survey format and group formation process in the experimental economic game?",
+                "question_id": "Q15",
+                "answer_instruction": "Describe the survey format and group formation process, including the matching process and options in case of unsuccessful matching."
+            },
+            {
+                "question": "What are the instructions for Stage 1 - Voluntary Contributions in the economic game?",
+                "question_id": "Q32_Stage1",
+                "answer_instruction": "Explain how participants decide on voluntary contributions, including the range, multiplication factor, and payoff calculation."
+            },
+            {
+                "question": "What are the instructions for Stage 2 - Mandatory Contributions in the economic game?",
+                "question_id": "Q32_Stage2",
+                "answer_instruction": "Describe how participants decide on mandatory contributions, including the rate setting and payoff calculation."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the timing for Q33?",
+                "question_id": "Q33_Timing",
+                "answer_instruction": "Provide the timing details including First Click, Last Click, Page Submit, and Click Count.",
+                "data_information_knowledge_and_context": "Q33 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Understanding the timing metrics for Q33 is crucial for analyzing user interaction patterns and response times, which can provide insights into user behavior and the efficiency of the interface."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "What is the timing for Q33?",
+                "question_id": "Q33_Timing",
+                "answer_instruction": "Provide the timing details including First Click, Last Click, Page Submit, and Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the sequence of stages in the game, and how does it affect your performance?",
+                "question_id": "Q34_StageSequence",
+                "answer_instruction": "Explain the importance of stage independence and performance across both stages.",
+                "data_information_knowledge_and_context": "Game Sequence: You will participate in both stages in a random order. Your group remains consistent throughout the experiment. Treat each stage independently; decisions in one stage should not influence decisions in the other. Your final pay-off will be randomly selected from one of the two stages of the economic game. Therefore, your performance across both stages is equally important.",
+                "reasoning_justification_relevant": "Understanding the sequence and independence of stages is crucial for participants to focus on each stage without bias, ensuring fair assessment of their performance."
+            },
+            {
+                "question": "What are the time limits and automatic progression rules in the game?",
+                "question_id": "Q34_TimeLimits",
+                "answer_instruction": "Describe the time constraints and what happens when time runs out.",
+                "data_information_knowledge_and_context": "Time Limits and Automatic Progression: You will have a maximum of ${e://Field/maxGetWaitTime} seconds to make your decisions in each task of each stage. After ${e://Field/maxGetWaitTime} seconds, you will be automatically advanced to the next page of the study/economic game. A countdown timer at the bottom of each page will show the time remaining for each decision.",
+                "reasoning_justification_relevant": "Time management is essential for participants to make informed decisions within the constraints, impacting their overall performance."
+            },
+            {
+                "question": "What is the purpose of the comprehension check questions?",
+                "question_id": "Q25_ComprehensionCheck",
+                "answer_instruction": "Explain why it is important to answer these questions correctly.",
+                "data_information_knowledge_and_context": "Comprehension Check: On the next page, you will see 2 quick comprehension check questions. Understanding these is crucial for the live interaction part of the study. You will have ${e://Field/maxGetWaitTime} seconds to answer each question. Unlike the actual experiment, you must answer correctly to proceed.",
+                "reasoning_justification_relevant": "Ensuring participants understand the instructions is vital for the integrity of the experiment, as it affects their ability to engage correctly with the tasks."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the sequence of stages in the game, and how does it affect your performance?",
+                "question_id": "Q34_StageSequence",
+                "answer_instruction": "Explain the importance of stage independence and performance across both stages."
+            },
+            {
+                "question": "What are the time limits and automatic progression rules in the game?",
+                "question_id": "Q34_TimeLimits",
+                "answer_instruction": "Describe the time constraints and what happens when time runs out."
+            },
+            {
+                "question": "What is the purpose of the comprehension check questions?",
+                "question_id": "Q25_ComprehensionCheck",
+                "answer_instruction": "Explain why it is important to answer these questions correctly."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the main research question addressed in the study?",
+                "question_id": "Q1",
+                "answer_instruction": "Summarize the primary research question as stated in the document.",
+                "data_information_knowledge_and_context": "The document outlines the research question as 'What is the impact of X on Y?'",
+                "reasoning_justification_relevant": "Understanding the main research question is crucial for grasping the study's purpose and scope."
+            },
+            {
+                "question": "What experimental methods were used in the study?",
+                "question_id": "Q2",
+                "answer_instruction": "List and describe the experimental methods mentioned in the document.",
+                "data_information_knowledge_and_context": "The document describes methods such as controlled experiments, surveys, and observational studies.",
+                "reasoning_justification_relevant": "Identifying the experimental methods is essential for evaluating the study's validity and reliability."
+            },
+            {
+                "question": "What were the key findings of the study?",
+                "question_id": "Q3",
+                "answer_instruction": "Provide a summary of the study's main findings as presented in the document.",
+                "data_information_knowledge_and_context": "The document reports that X significantly affects Y, with a p-value of <0.05.",
+                "reasoning_justification_relevant": "Key findings offer insights into the study's contributions and implications."
+            },
+            {
+                "question": "What variables were controlled in the experiments?",
+                "question_id": "Q4",
+                "answer_instruction": "Identify and explain the controlled variables in the study.",
+                "data_information_knowledge_and_context": "The document states that variables such as age, gender, and socioeconomic status were controlled.",
+                "reasoning_justification_relevant": "Controlled variables are important for ensuring the accuracy and reliability of experimental results."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the main research question addressed in the study?",
+                "question_id": "Q1",
+                "answer_instruction": "Summarize the primary research question as stated in the document."
+            },
+            {
+                "question": "What experimental methods were used in the study?",
+                "question_id": "Q2",
+                "answer_instruction": "List and describe the experimental methods mentioned in the document."
+            },
+            {
+                "question": "What were the key findings of the study?",
+                "question_id": "Q3",
+                "answer_instruction": "Provide a summary of the study's main findings as presented in the document."
+            },
+            {
+                "question": "What variables were controlled in the experiments?",
+                "question_id": "Q4",
+                "answer_instruction": "Identify and explain the controlled variables in the study."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "Please identify the median percentage value from the list provided: 20%, 40%, 50%, 60%, and 80%.",
+                "question_id": "Q27",
+                "answer_instruction": "Select one of the following options: 20%, 40%, 50%, 60%, 80%.",
+                "data_information_knowledge_and_context": "Consider the following list: 20%, 40%, 50%, 60%, and 80%. Hint: The median is the value that falls in the middle when the rates are ordered from lowest to highest.",
+                "reasoning_justification_relevant": "Understanding how to identify the median value is a fundamental statistical skill, important for interpreting data sets and making informed decisions based on data analysis."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "Please identify the median percentage value from the list provided: 20%, 40%, 50%, 60%, and 80%.",
+                "question_id": "Q27",
+                "answer_instruction": "Select one of the following options: 20%, 40%, 50%, 60%, 80%."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "Calculate your mandatory contribution from an initial endowment of 20 units, assuming a median rate of 50%. Enter the calculated amount below (must be a number).",
+                "question_id": "Q31",
+                "answer_instruction": "Divide the median rate by 100, then multiply by your endowment.",
+                "data_information_knowledge_and_context": "Assuming a median rate of 50%, calculate your mandatory contribution from an initial endowment of 20 units. Enter the calculated amount below (must be a number): 'Hint: Divide the median rate by 100, then multiply by your endowment.'",
+                "reasoning_justification_relevant": "This question assesses the participant's ability to perform basic arithmetic calculations, which is crucial for understanding their comprehension and application of mathematical concepts in experimental settings."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "Calculate your mandatory contribution from an initial endowment of 20 units, assuming a median rate of 50%. Enter the calculated amount below (must be a number).",
+                "question_id": "Q31",
+                "answer_instruction": "Divide the median rate by 100, then multiply by your endowment."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the next step after completing the instructions and comprehension check?",
+                "question_id": "Q32",
+                "answer_instruction": "Click on the button to proceed to the group matching and live interactive game.",
+                "data_information_knowledge_and_context": "Instructions and Comprehension Check Completed. Now proceeding to the group matching and live interactive game. To continue, please click on the button below:",
+                "reasoning_justification_relevant": "Understanding the transition from comprehension checks to the interactive game is crucial for participants to follow the experimental procedure correctly."
+            },
+            {
+                "question": "What timing metrics are recorded in Q34?",
+                "question_id": "Q34",
+                "answer_instruction": "First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "Q34 Timing: First Click (1), Last Click (2), Page Submit (3), Click Count (4).",
+                "reasoning_justification_relevant": "Recording timing metrics helps in analyzing participant engagement and response patterns during the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the next step after completing the instructions and comprehension check?",
+                "question_id": "Q32",
+                "answer_instruction": "Click on the button to proceed to the group matching and live interactive game."
+            },
+            {
+                "question": "What timing metrics are recorded in Q34?",
+                "question_id": "Q34",
+                "answer_instruction": "First Click, Last Click, Page Submit, Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How many participants are needed to join the match screen?",
+                "question_id": "Q1",
+                "answer_instruction": "Count the number of participants waiting to join as indicated by the placeholder '?' in the text.",
+                "data_information_knowledge_and_context": "Match screen\n\nWaiting for ? participant(s) to join.",
+                "reasoning_justification_relevant": "Understanding the number of participants needed is crucial for initiating the match screen process."
+            },
+            {
+                "question": "What are the different match timer events recorded?",
+                "question_id": "Q2",
+                "answer_instruction": "List the events: First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "match timer Timing\nFirst Click (1)\nLast Click (2)\nPage Submit (3)\nClick Count (4)",
+                "reasoning_justification_relevant": "Identifying these events is important for analyzing user interaction timing during the match process."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "How many participants are needed to join the match screen?",
+                "question_id": "Q1",
+                "answer_instruction": "Count the number of participants waiting to join as indicated by the placeholder '?' in the text."
+            },
+            {
+                "question": "What are the different match timer events recorded?",
+                "question_id": "Q2",
+                "answer_instruction": "List the events: First Click, Last Click, Page Submit, Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What role have you been assigned in the experiment?",
+                "question_id": "Q49_role_assignment",
+                "answer_instruction": "State the role assigned to you as Participant ${e://Field/participantRole}.",
+                "data_information_knowledge_and_context": "You have been assigned the role of Participant ${e://Field/participantRole}.",
+                "reasoning_justification_relevant": "Understanding the role assignment is crucial for participants to comprehend their position and responsibilities within the experiment."
+            },
+            {
+                "question": "How many units will you receive in each of the two stages?",
+                "question_id": "Q49_units_received",
+                "answer_instruction": "State the number of units you will receive in each stage as ${e://Field/endowment_own}.",
+                "data_information_knowledge_and_context": "In both of the two stages, you will receive ${e://Field/endowment_own} units.",
+                "reasoning_justification_relevant": "Knowing the units received is important for participants to understand their endowment and how it may affect their decisions."
+            },
+            {
+                "question": "What is the total number of units for the group?",
+                "question_id": "Q49_total_units_group",
+                "answer_instruction": "State the total number of units for the group as ${e://Field/endowment_group}.",
+                "data_information_knowledge_and_context": "The total for the group is always ${e://Field/endowment_group} units.",
+                "reasoning_justification_relevant": "The total group units provide context for individual allocations and help participants understand the overall distribution."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What role have you been assigned in the experiment?",
+                "question_id": "Q49_role_assignment",
+                "answer_instruction": "State the role assigned to you as Participant ${e://Field/participantRole}."
+            },
+            {
+                "question": "How many units will you receive in each of the two stages?",
+                "question_id": "Q49_units_received",
+                "answer_instruction": "State the number of units you will receive in each stage as ${e://Field/endowment_own}."
+            },
+            {
+                "question": "What is the total number of units for the group?",
+                "question_id": "Q49_total_units_group",
+                "answer_instruction": "State the total number of units for the group as ${e://Field/endowment_group}."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How much do you want to transfer voluntarily to the public account?",
+                "question_id": "Q34",
+                "answer_instruction": "Enter the number of units you want to transfer, with a maximum of 2 decimal places.",
+                "data_information_knowledge_and_context": "Your task in this stage is to decide how much you want to transfer voluntarily to the \"public account.\" Please enter the number of units you want to voluntarily transfer to the public account in the box below. A maximum of 2 decimal places is allowed. Your transfer to the public account (0 - ${e://Field/endowment_own}):",
+                "reasoning_justification_relevant": "This question is relevant as it measures the participant's willingness to contribute voluntarily to a public account, which is a key variable in understanding cooperative behavior in economic experiments."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "How much do you want to transfer voluntarily to the public account?",
+                "question_id": "Q34",
+                "answer_instruction": "Enter the number of units you want to transfer, with a maximum of 2 decimal places."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the significance of the 'send' command in the experimental setup?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the role and impact of the 'send' command within the context of the experiment.",
+                "data_information_knowledge_and_context": "The document contains the word 'send' at the top of the page, suggesting it might be a command or instruction relevant to the experimental methods discussed.",
+                "reasoning_justification_relevant": "Understanding the significance of specific commands like 'send' is crucial for replicating the experiment and comprehending its methodology."
+            }
+        ],
+        "instruction_completeness": "80",
+        "ambiguity": "20",
+        "logical_consistency": "90",
+        "option_completeness": "70",
+        "final_items": [
+            {
+                "question": "What is the significance of the 'send' command in the experimental setup?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the role and impact of the 'send' command within the context of the experiment."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "If timeOutLog Contains terminated, what should be displayed?",
+                "question_id": "Q1",
+                "answer_instruction": "Display 'terminate screen'.",
+                "data_information_knowledge_and_context": "Display This Question: If timeOutLog Contains terminated terminate screen",
+                "reasoning_justification_relevant": "This question is relevant as it determines the condition under which a specific message ('terminate screen') should be displayed, which is crucial for understanding the flow of the experiment."
+            },
+            {
+                "question": "If timeOutLog Contains terminated, what timing information should be recorded?",
+                "question_id": "Q2",
+                "answer_instruction": "Record First Click, Last Click, Page Submit, and Click Count.",
+                "data_information_knowledge_and_context": "Display This Question: If timeOutLog Contains terminated terminate timer Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "This question is important for capturing user interaction data, which is essential for analyzing participant behavior during the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "If timeOutLog Contains terminated, what should be displayed?",
+                "question_id": "Q1",
+                "answer_instruction": "Display 'terminate screen'."
+            },
+            {
+                "question": "If timeOutLog Contains terminated, what timing information should be recorded?",
+                "question_id": "Q2",
+                "answer_instruction": "Record First Click, Last Click, Page Submit, and Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is your role in the 'Voluntary' Contribution Stage?",
+                "question_id": "Q55_role",
+                "answer_instruction": "Select your role from the options provided: A, B, C, D, or E.",
+                "data_information_knowledge_and_context": "Q55 \"Voluntary\" Contribution Stage Feedback on Outcome Remember, you are Participant ${e://Field/participantRole}.",
+                "reasoning_justification_relevant": "Understanding the participant's role is crucial for analyzing their contribution behavior and the dynamics within the group."
+            },
+            {
+                "question": "How many units did each participant in your group transfer?",
+                "question_id": "Q55_units_transferred",
+                "answer_instruction": "Review the units transferred by each participant: A, B, C, D, E.",
+                "data_information_knowledge_and_context": "The participants in your group each transferred: A ${e://Field/voluntary_A}, B ${e://Field/voluntary_B}, C ${e://Field/voluntary_C}, D ${e://Field/voluntary_D}, E ${e://Field/voluntary_E}.",
+                "reasoning_justification_relevant": "This information is necessary to calculate the total group contribution and individual payoffs."
+            },
+            {
+                "question": "What is the total sum of transfers by the group?",
+                "question_id": "Q55_group_total",
+                "answer_instruction": "Calculate the total sum of transfers by adding the units transferred by A, B, C, D, and E.",
+                "data_information_knowledge_and_context": "Group Total ${e://Field/voluntary_group}",
+                "reasoning_justification_relevant": "The group total is essential for determining the overall contribution and its impact on the outcome."
+            },
+            {
+                "question": "What is your payoff in this stage?",
+                "question_id": "Q55_payoff",
+                "answer_instruction": "Refer to the calculated payoff amount provided.",
+                "data_information_knowledge_and_context": "Your payoff in this stage is: ${e://Field/voluntary_payoff} units.",
+                "reasoning_justification_relevant": "Knowing the payoff helps participants understand the results of their contributions and the group's performance."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is your role in the 'Voluntary' Contribution Stage?",
+                "question_id": "Q55_role",
+                "answer_instruction": "Select your role from the options provided: A, B, C, D, or E."
+            },
+            {
+                "question": "How many units did each participant in your group transfer?",
+                "question_id": "Q55_units_transferred",
+                "answer_instruction": "Review the units transferred by each participant: A, B, C, D, E."
+            },
+            {
+                "question": "What is the total sum of transfers by the group?",
+                "question_id": "Q55_group_total",
+                "answer_instruction": "Calculate the total sum of transfers by adding the units transferred by A, B, C, D, and E."
+            },
+            {
+                "question": "What is your payoff in this stage?",
+                "question_id": "Q55_payoff",
+                "answer_instruction": "Refer to the calculated payoff amount provided."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is your proposed mandatory contribution rate to the public account (0 - 100%)?",
+                "question_id": "Q57",
+                "answer_instruction": "Enter your proposed mandatory contribution rate to the public account in the box below. A maximum of 2 decimal places is allowed.",
+                "data_information_knowledge_and_context": "Your task in this stage is to decide on your preferred mandatory contribution rate to the 'public account.' Each of the other four participants will also make a decision about their proposed mandatory contribution rate to the public account individually and simultaneously. After all five participants in your group have made their decisions, the median vote's contribution rate (i.e., the rate in the middle when the set of five rates are ordered from lowest to highest) will be applied equally to all group members, regardless of their initial endowment level.",
+                "reasoning_justification_relevant": "This question is crucial for understanding individual decision-making in a group setting where a median contribution rate will be applied to all members. It explores how individuals choose their contribution rates when their decision impacts the entire group."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "What is your proposed mandatory contribution rate to the public account (0 - 100%)?",
+                "question_id": "Q57",
+                "answer_instruction": "Enter your proposed mandatory contribution rate to the public account in the box below. A maximum of 2 decimal places is allowed."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is your role in the group and how many units will you receive in both stages?",
+                "question_id": "Q61",
+                "answer_instruction": "You have been assigned the role of Participant ${e://Field/participantRole}. In both of the two stages, you will receive ${e://Field/endowment_own} units.",
+                "data_information_knowledge_and_context": "Q61 Role Assignment and Endowment Allocation You have been assigned the role of Participant ${e://Field/participantRole}. In both of the two stages, you will receive ${e://Field/endowment_own} units.",
+                "reasoning_justification_relevant": "Understanding the role and allocation of units is crucial for participants to comprehend their position and potential outcomes in the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is your role in the group and how many units will you receive in both stages?",
+                "question_id": "Q61",
+                "answer_instruction": "You have been assigned the role of Participant ${e://Field/participantRole}. In both of the two stages, you will receive ${e://Field/endowment_own} units."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the feedback on the outcome for the 'Voluntary' Contribution Stage?",
+                "question_id": "Q77",
+                "answer_instruction": "Provide the units transferred to 'Public Account', the group total, and the summary of outcome and payoffs from this stage.",
+                "data_information_knowledge_and_context": "Q77 \"Voluntary\" Contribution Stage Feedback on Outcome Remember, you are Participant ${e://Field/participantRole}. Role Unit(s) Transferred to \"Public Account\" ${e://Field/participantRole} ${e://Field/voluntary_own} Group Total ${e://Field/voluntary_group} Summary of Outcome & Payoffs from this Stage: The sum of transfers by the group was ${e://Field/voluntary_group} units. This amount was multiplied by ${e://Field/multiplier}, resulting in ${e://Field/voluntary_group * e://Field/multiplier} units. This total amount was divided equally among the five participants in your group, with each participant receiving ${e://Field/voluntary_group * e://Field/multiplier / 5} units. Your payoff in this stage is: ${e://Field/voluntary_payoff} units.",
+                "reasoning_justification_relevant": "Understanding the feedback on the outcome of the 'Voluntary' Contribution Stage is crucial for analyzing participant behavior and decision-making in economic experiments."
+            },
+            {
+                "question": "What is the feedback on the outcome for the 'Mandatory' Contribution Stage?",
+                "question_id": "Q59",
+                "answer_instruction": "Provide the group's median mandatory contribution rate, the units transferred to 'Public Account', the group total, and the payoffs from this stage.",
+                "data_information_knowledge_and_context": "Q59 \"Mandatory\" Contribution Stage Feedback on Outcome The group's median mandatory contribution rate was ${e://Field/ratio_group} percent, which was applied equally to all group members. Remember, you are Participant ${e://Field/participantRole}. Role Unit(s) Transferred to \"Public Account\" ${e://Field/mandatory_own} ${e://Field/participantRole} Group Total ${e://Field/mandatory_group} Summary of Outcome & Payoffs from this Stage: The sum of transfers by the group",
+                "reasoning_justification_relevant": "Understanding the feedback on the outcome of the 'Mandatory' Contribution Stage helps in evaluating the effects of enforced contribution rules on group dynamics and individual payoffs."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the feedback on the outcome for the 'Voluntary' Contribution Stage?",
+                "question_id": "Q77",
+                "answer_instruction": "Provide the units transferred to 'Public Account', the group total, and the summary of outcome and payoffs from this stage."
+            },
+            {
+                "question": "What is the feedback on the outcome for the 'Mandatory' Contribution Stage?",
+                "question_id": "Q59",
+                "answer_instruction": "Provide the group's median mandatory contribution rate, the units transferred to 'Public Account', the group total, and the payoffs from this stage."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "Did you prefer the \"${e://Field/stage1}\" or \"${e://Field/stage2}\" Contribution stage?",
+                "question_id": "Q44",
+                "answer_instruction": "Choose one: I preferred the \"Mandatory\" Contribution stage or I preferred the \"Voluntary\" Contribution stage.",
+                "data_information_knowledge_and_context": "Q44 Did you prefer the \"${e://Field/stage1}\" or \"${e://Field/stage2}\" Contribution stage?",
+                "reasoning_justification_relevant": "This question is relevant to understand participant preferences between different contribution stages, which can provide insights into behavioral responses to mandatory versus voluntary conditions."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "Did you prefer the \"${e://Field/stage1}\" or \"${e://Field/stage2}\" Contribution stage?",
+                "question_id": "Q44",
+                "answer_instruction": "Choose one: I preferred the \"Mandatory\" Contribution stage or I preferred the \"Voluntary\" Contribution stage."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the reason for your preference?",
+                "question_id": "Q45",
+                "answer_instruction": "Select one of the options or specify another reason.",
+                "data_information_knowledge_and_context": "Q45 What is the reason for your preference? (1) I think the final outcome is usually better for me (2) I think that it is fair (4) I think the final outcome is usually better for everybody (5) Other, please specify:",
+                "reasoning_justification_relevant": "Understanding the reasons behind preferences can provide insights into decision-making processes and individual values."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "What is the reason for your preference?",
+                "question_id": "Q45",
+                "answer_instruction": "Select one of the options or specify another reason."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "In real life, which of the two stylised games would you prefer if it was about financing a collective service that benefits everyone equally (e.g., public health, national defence, infrastructure)?",
+                "question_id": "Q47",
+                "answer_instruction": "Choose between 'Mandatory' Contribution stage or 'Voluntary' Contribution stage.",
+                "data_information_knowledge_and_context": "Q47 In real life, which of the two stylised games would you prefer if it was about financing a collective service that benefits everyone equally (e.g., public health, national defence, infrastructure)? I would prefer the 'Mandatory' Contribution stage (1) I would prefer the 'Voluntary' Contribution stage (3)",
+                "reasoning_justification_relevant": "This question is relevant as it explores preferences for different economic contribution models in real-life scenarios, providing insights into public opinion on funding essential services."
+            },
+            {
+                "question": "If you have additional insights or comments about your preferred choice between the 'Mandatory' or 'Voluntary' Contribution stages, particularly in funding services like infrastructure, public health or national defense, please share them in the box below.",
+                "question_id": "Q48",
+                "answer_instruction": "Provide additional insights or comments about your preferred choice.",
+                "data_information_knowledge_and_context": "Q48 If you have additional insights or comments about your preferred choice between the 'Mandatory' or 'Voluntary' Contribution stages, particularly in funding services like infrastructure, public health or national defense, please share them in the box below.",
+                "reasoning_justification_relevant": "This question allows for qualitative data collection on participant reasoning, enriching the understanding of their preferences and the factors influencing their decisions."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "In real life, which of the two stylised games would you prefer if it was about financing a collective service that benefits everyone equally (e.g., public health, national defence, infrastructure)?",
+                "question_id": "Q47",
+                "answer_instruction": "Choose between 'Mandatory' Contribution stage or 'Voluntary' Contribution stage."
+            },
+            {
+                "question": "If you have additional insights or comments about your preferred choice between the 'Mandatory' or 'Voluntary' Contribution stages, particularly in funding services like infrastructure, public health or national defense, please share them in the box below.",
+                "question_id": "Q48",
+                "answer_instruction": "Provide additional insights or comments about your preferred choice."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How did you feel about the bonus payment you received?",
+                "question_id": "Q1_bonus_feedback",
+                "answer_instruction": "Provide your feedback on the bonus payment, including any thoughts or feelings you have about it.",
+                "data_information_knowledge_and_context": "The document ends with a block titled 'Thank You and Feedback on Bonus Payment', indicating a request for feedback on the bonus payment received.",
+                "reasoning_justification_relevant": "Understanding participants' feelings about bonus payments can provide insights into their motivation and satisfaction, which are important for evaluating the effectiveness of incentive structures in experiments."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "How did you feel about the bonus payment you received?",
+                "question_id": "Q1_bonus_feedback",
+                "answer_instruction": "Provide your feedback on the bonus payment, including any thoughts or feelings you have about it."
+            }
+        ]
+    }
+]
