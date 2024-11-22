@@ -1,0 +1,704 @@
+[
+    {
+        "draft_items": [
+            {
+                "question": "Welcome to Our Study. Please ensure you can dedicate at least the next ${e://Field/estimatedSurveyTime} minutes to the study without interruptions. To continue, please click on the button below.",
+                "question_id": "Q1",
+                "answer_instruction": "Click the button to continue.",
+                "data_information_knowledge_and_context": "Q1 Welcome to Our Study Key Points Before You Begin: Time Dedication: Please ensure you can dedicate at least the next ${e://Field/estimatedSurveyTime} minutes to the study without interruptions. This is crucial for the real-time interaction component of our research. Reminder: The estimated average total payout for your participation is ${e://Field/estimatedAverageTotalPayout} AUD. No Backtracking: Once you move past a page, there's no going back. Read carefully before advancing. Real-Time Interaction: This study involves live interaction with one to two other anonymous participants. Be prepared for real-time engagement. By continuing, you acknowledge the commitment and real-time interaction required. To continue, please click on the button below:",
+                "reasoning_justification_relevant": "This question is crucial as it sets the expectations for participants regarding time commitment and interaction requirements, ensuring they are prepared for the study's demands."
+            },
+            {
+                "question": "Q2 Timing: Record the timing details for First Click, Last Click, Page Submit, and Click Count.",
+                "question_id": "Q2",
+                "answer_instruction": "Record the timing details.",
+                "data_information_knowledge_and_context": "Q2 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Timing data is essential for understanding participant engagement and interaction with the survey, providing insights into their behavior during the study."
+            }
+        ],
+        "instruction_completeness": "85",
+        "ambiguity": "10",
+        "logical_consistency": "90",
+        "option_completeness": "80",
+        "final_items": [
+            {
+                "question": "Welcome to Our Study. Please ensure you can dedicate at least the next ${e://Field/estimatedSurveyTime} minutes to the study without interruptions. To continue, please click on the button below.",
+                "question_id": "Q1",
+                "answer_instruction": "Click the button to continue."
+            },
+            {
+                "question": "Q2 Timing: Record the timing details for First Click, Last Click, Page Submit, and Click Count.",
+                "question_id": "Q2",
+                "answer_instruction": "Record the timing details."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the survey format and group formation process in the experimental economic game?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the one- or two-stage experimental economic game and the matching process with other participants.",
+                "data_information_knowledge_and_context": "Survey Format: First, a one- or two-stage experimental economic game with the other participants. After the game, you will complete a post-experimental questionnaire at your own pace. Group Formation: Matching Process: After reading the study instructions (see next page), you will be matched with one to two other participants. This process usually takes less than a few minutes. In Case of Unsuccessful Matching: If we can't match you successfully, you will have the choice to either quit the experiment and be redirected back to your panel provider, try again to match, or come back later and be redirected back to your panel provider.",
+                "reasoning_justification_relevant": "Understanding the survey format and group formation process is crucial for participants to know how they will interact with others and what to expect from the experiment."
+            },
+            {
+                "question": "What are the timing metrics recorded during the experiment?",
+                "question_id": "Q4",
+                "answer_instruction": "List the timing metrics such as First Click, Last Click, Page Submit, and Click Count.",
+                "data_information_knowledge_and_context": "Q4 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Timing metrics are important for analyzing participant behavior and engagement during the experiment."
+            },
+            {
+                "question": "What roles and decision-making capabilities are assigned to participants in the economic game?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the roles of Participant A, B, and C, and their respective decision-making capabilities.",
+                "data_information_knowledge_and_context": "Your Role: During the matching process, you will also be assigned a role as either Participant A, B, or C. Your role determines your decision-making capabilities. Roles and Decision-Making Capabilities: Participant A (Decision-maker): At the first step, Participant A decides how many units to take from Participant B's endowment, ranging from 0 to ${e://Field/total_endowment}. Participant C (Possible Delegate, human or computer): If Participant A is in a group with 3 members and cannot decide, they may delegate the decision to Participant C, incurring a delegation fee. Participant C then decides how many units to take from Participant B's endowment on Participant A's behalf, ranging from 0 to ${e://Field/total_endowment} - [delegation fee]. Note, the delegation fee may be either fixed (${e://Field/fixed_fee} units) or commission-based (${e://Field/commission_fee}%). Participant B (Endowment holder / Recipient, beginning with ${e://Field/total_endowment} units): Passively receives whatever is left from their endowment after Participant A or C’s decision.",
+                "reasoning_justification_relevant": "Understanding the roles and decision-making capabilities is essential for participants to perform their tasks effectively in the economic game."
+            }
+        ],
+        "instruction_completeness": "95",
+        "ambiguity": "10",
+        "logical_consistency": "90",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the survey format and group formation process in the experimental economic game?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the one- or two-stage experimental economic game and the matching process with other participants."
+            },
+            {
+                "question": "What are the timing metrics recorded during the experiment?",
+                "question_id": "Q4",
+                "answer_instruction": "List the timing metrics such as First Click, Last Click, Page Submit, and Click Count."
+            },
+            {
+                "question": "What roles and decision-making capabilities are assigned to participants in the economic game?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the roles of Participant A, B, and C, and their respective decision-making capabilities."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the timing for Q2?",
+                "question_id": "Q2_Timing",
+                "answer_instruction": "Provide the timing details including First Click, Last Click, Page Submit, and Click Count.",
+                "data_information_knowledge_and_context": "Q2 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Understanding the timing metrics for Q2 is crucial for analyzing user interaction and behavior during the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the timing for Q2?",
+                "question_id": "Q2_Timing",
+                "answer_instruction": "Provide the timing details including First Click, Last Click, Page Submit, and Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What are the instructions for the economic game regarding time limits and automatic progression?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the time limits and automatic progression rules for the economic game as described in the study instructions.",
+                "data_information_knowledge_and_context": "You will have a maximum of ${e://Field/maxGetWaitTime} seconds to make your decisions in each task. After ${e://Field/maxGetWaitTime} seconds, you will be automatically advanced to the next page of the study/economic game. A countdown timer at the bottom of each page will show the time remaining for each decision. Your final pay-off will be determined by the final outcomes from the economic game. Therefore, your performance throughout the entire economic game is equally important.",
+                "reasoning_justification_relevant": "Understanding the time constraints and automatic progression is crucial for participants to manage their decision-making process effectively within the economic game."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What are the instructions for the economic game regarding time limits and automatic progression?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the time limits and automatic progression rules for the economic game as described in the study instructions."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the purpose of the match screen?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the function of the match screen in the context of the experiment.",
+                "data_information_knowledge_and_context": "Match screen\nWaiting for ? participant(s) to join.",
+                "reasoning_justification_relevant": "Understanding the purpose of the match screen is crucial for comprehending how participants are grouped or matched in the experiment."
+            },
+            {
+                "question": "What are the different timing metrics recorded during the match process?",
+                "question_id": "Q2",
+                "answer_instruction": "List and describe the timing metrics: First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "match timer Timing\nFirst Click (1)\nLast Click (2)\nPage Submit (3)\nClick Count (4)",
+                "reasoning_justification_relevant": "Identifying the timing metrics helps in analyzing participant interaction and response times during the experiment."
+            }
+        ],
+        "instruction_completeness": "85",
+        "ambiguity": "10",
+        "logical_consistency": "90",
+        "option_completeness": "80",
+        "final_items": [
+            {
+                "question": "What is the purpose of the match screen?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the function of the match screen in the context of the experiment."
+            },
+            {
+                "question": "What are the different timing metrics recorded during the match process?",
+                "question_id": "Q2",
+                "answer_instruction": "List and describe the timing metrics: First Click, Last Click, Page Submit, Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How many units do you want to take from Participant B for yourself?",
+                "question_id": "Q24",
+                "answer_instruction": "Enter the number of units you want to take from Participant B in the box below. A maximum of 2 decimal places is allowed.",
+                "data_information_knowledge_and_context": "You have been assigned to Participant A (Decision-maker). Participant B (Recipient) has an endowment of ${e://Field/total_endowment} units. Your task in this stage is to decide how many units you want to take from Participant B for yourself.",
+                "reasoning_justification_relevant": "This question is relevant as it assesses decision-making behavior in a resource allocation task, which is crucial for understanding economic and social preferences."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "How many units do you want to take from Participant B for yourself?",
+                "question_id": "Q24",
+                "answer_instruction": "Enter the number of units you want to take from Participant B in the box below. A maximum of 2 decimal places is allowed."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the timing information for Q25?",
+                "question_id": "Q25_Timing_Info",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count details.",
+                "data_information_knowledge_and_context": "Q25 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Understanding the timing details for Q25 is crucial for analyzing user interaction and response time, which can impact the interpretation of experimental results."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the timing information for Q25?",
+                "question_id": "Q25_Timing_Info",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count details."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "End of Game Feedback on Outcome: The economic experiment is now complete. You took ${e://Field/direct_transfer} units from Participant B. Participant B was left with ${e://Field/payoff_recipient} units. To continue, please click on the button below:",
+                "question_id": "Q61",
+                "answer_instruction": "Click on the button to continue.",
+                "data_information_knowledge_and_context": "Q61 End of Game Feedback on Outcome The economic experiment is now complete. You took ${e://Field/direct_transfer} units from Participant B. Participant B was left with ${e://Field/payoff_recipient} units. To continue, please click on the button below:",
+                "reasoning_justification_relevant": "This question provides feedback on the outcome of the economic experiment, which is crucial for participants to understand the results of their actions and the final distribution of units."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "End of Game Feedback on Outcome: The economic experiment is now complete. You took ${e://Field/direct_transfer} units from Participant B. Participant B was left with ${e://Field/payoff_recipient} units. To continue, please click on the button below:",
+                "question_id": "Q61",
+                "answer_instruction": "Click on the button to continue."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "Choose one of the following actions: 1) I will take the units from Participant B myself. 2) I will employ the delegate for a fixed fee to collect the endowment from Participant B on my behalf.",
+                "question_id": "Q43",
+                "answer_instruction": "Select either option 0 or option 1 based on your decision.",
+                "data_information_knowledge_and_context": "You have been assigned to Participant A (Decision-maker). Participant B (Recipient) has an endowment of total_endowment units. Your task in this stage is to decide whether you take units from Participant B yourself or employ a delegate to do it for you for a fixed fee. Participant B is informed on who made the choice to take the amount.",
+                "reasoning_justification_relevant": "This question is crucial as it examines decision-making behavior in a controlled economic experiment, specifically focusing on the choice between direct action and delegation, which can reveal insights into preferences for control, risk, and cost management."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "Choose one of the following actions: 1) I will take the units from Participant B myself. 2) I will employ the delegate for a fixed fee to collect the endowment from Participant B on my behalf.",
+                "question_id": "Q43",
+                "answer_instruction": "Select either option 0 or option 1 based on your decision."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "Choose one of the following actions: (1) I will take the units from Participant B myself. (2) I will employ the delegate to collect the endowment for a commission fee.",
+                "question_id": "Q45",
+                "answer_instruction": "Select either option 0 or 1 based on your decision.",
+                "data_information_knowledge_and_context": "You have been assigned to Participant A (Decision-maker). Participant B (Recipient) has an endowment of total_endowment units. Your task in this stage is to decide whether you take units from Participant B yourself or employ a delegate to do it for you for a commission-based fee.",
+                "reasoning_justification_relevant": "This question is important as it assesses decision-making preferences regarding direct action versus delegation with a cost."
+            },
+            {
+                "question": "Enter the number of units you want to take from Participant B.",
+                "question_id": "Q40",
+                "answer_instruction": "Provide a numerical value between 0 and total_endowment, allowing up to 2 decimal places.",
+                "data_information_knowledge_and_context": "You chose to take the units from Participant B yourself. Participant B has an endowment of total_endowment units. Your task in this stage is to decide how many units you want to take from Participant B for yourself.",
+                "reasoning_justification_relevant": "This question is relevant as it measures the extent of resource allocation decisions made by the participant."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "Choose one of the following actions: (1) I will take the units from Participant B myself. (2) I will employ the delegate to collect the endowment for a commission fee.",
+                "question_id": "Q45",
+                "answer_instruction": "Select either option 0 or 1 based on your decision."
+            },
+            {
+                "question": "Enter the number of units you want to take from Participant B.",
+                "question_id": "Q40",
+                "answer_instruction": "Provide a numerical value between 0 and total_endowment, allowing up to 2 decimal places."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the timing information for Q41?",
+                "question_id": "Q41_Timing",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count.",
+                "data_information_knowledge_and_context": "Q41 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Understanding the timing information helps in analyzing participant behavior during the task."
+            },
+            {
+                "question": "What feedback is provided at the end of the game in Q51?",
+                "question_id": "Q51_End_of_Game_Feedback",
+                "answer_instruction": "Summarize the feedback regarding the economic experiment outcome.",
+                "data_information_knowledge_and_context": "Q51 End of Game Feedback on Outcome The economic experiment is now complete. You took ${e://Field/direct_transfer} units from Participant B yourself. Therefore, Participant C did not earn any delegate fee. Participant B was left with ${e://Field/payoff_recipient} units.",
+                "reasoning_justification_relevant": "The feedback is crucial for participants to understand the outcome of their decisions in the experiment."
+            },
+            {
+                "question": "What is the timing information for Q52?",
+                "question_id": "Q52_Timing",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count.",
+                "data_information_knowledge_and_context": "Q52 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Timing data is essential for evaluating how participants interact with the task."
+            },
+            {
+                "question": "What is the task description for the Unit Allocation Stage in Q47?",
+                "question_id": "Q47_Unit_Allocation_Stage",
+                "answer_instruction": "Describe the task and what participants need to do next.",
+                "data_information_knowledge_and_context": "Q47 Unit Allocation Stage Task Description You chose to delegate the decision of how many units to take from Participant B to the ${e://Field/delegate_type} delegate. On the next screen, you will have to wait until the other participant(s) makes a decision.",
+                "reasoning_justification_relevant": "The task description provides context for participant actions and decisions in the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the timing information for Q41?",
+                "question_id": "Q41_Timing",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count."
+            },
+            {
+                "question": "What feedback is provided at the end of the game in Q51?",
+                "question_id": "Q51_End_of_Game_Feedback",
+                "answer_instruction": "Summarize the feedback regarding the economic experiment outcome."
+            },
+            {
+                "question": "What is the timing information for Q52?",
+                "question_id": "Q52_Timing",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count."
+            },
+            {
+                "question": "What is the task description for the Unit Allocation Stage in Q47?",
+                "question_id": "Q47_Unit_Allocation_Stage",
+                "answer_instruction": "Describe the task and what participants need to do next."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What are the timing metrics recorded for Q48?",
+                "question_id": "Q48_Timing_Metrics",
+                "answer_instruction": "List the metrics: First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "Q48 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Understanding the timing metrics is crucial for analyzing participant interaction and response time, which can impact the interpretation of experimental results."
+            },
+            {
+                "question": "What are the timing metrics recorded for the 'get timer'?",
+                "question_id": "Get_Timer_Timing_Metrics",
+                "answer_instruction": "List the metrics: First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "get timer Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "These metrics help in assessing how participants interact with the task, providing insights into their decision-making process and engagement level."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What are the timing metrics recorded for Q48?",
+                "question_id": "Q48_Timing_Metrics",
+                "answer_instruction": "List the metrics: First Click, Last Click, Page Submit, Click Count."
+            },
+            {
+                "question": "What are the timing metrics recorded for the 'get timer'?",
+                "question_id": "Get_Timer_Timing_Metrics",
+                "answer_instruction": "List the metrics: First Click, Last Click, Page Submit, Click Count."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the outcome of the economic experiment?",
+                "question_id": "Q53",
+                "answer_instruction": "Provide the delegate's transfer, fee, your payoff, and Participant B's remaining units.",
+                "data_information_knowledge_and_context": "The delegate took ${e://Field/delegate_transfer} units from Participant B for a fee of ${e://Field/payoff_delegate} unit(s). Therefore, your payoff from this game is ${e://Field/payoff_dictator} unit(s). Participant B was left with ${e://Field/payoff_recipient} units.",
+                "reasoning_justification_relevant": "This question assesses the understanding of the experiment's outcome, which is crucial for evaluating participants' comprehension of the results."
+            },
+            {
+                "question": "Record the timing details for the end of the game.",
+                "question_id": "Q54",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count timings.",
+                "data_information_knowledge_and_context": "Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Timing details are important for analyzing participant behavior and response patterns during the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the outcome of the economic experiment?",
+                "question_id": "Q53",
+                "answer_instruction": "Provide the delegate's transfer, fee, your payoff, and Participant B's remaining units."
+            },
+            {
+                "question": "Record the timing details for the end of the game.",
+                "question_id": "Q54",
+                "answer_instruction": "Provide the first click, last click, page submit, and click count timings."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What role have you been assigned in the experiment?",
+                "question_id": "Q42",
+                "answer_instruction": "You have been assigned to Participant B (Recipient).",
+                "data_information_knowledge_and_context": "Q42 Introduction Task Description You have been assigned to Participant B (Recipient).",
+                "reasoning_justification_relevant": "Understanding the role assignment is crucial for participants to know their responsibilities and actions in the experiment."
+            },
+            {
+                "question": "What information is provided at the end of the economic experiment?",
+                "question_id": "Q43",
+                "answer_instruction": "Participant A took ${e://Field/direct_transfer} units from you. You were left with ${e://Field/payoff_recipient} unit(s).",
+                "data_information_knowledge_and_context": "Q43 End of Game Feedback on Outcome The economic experiment is now complete. Participant A took ${e://Field/direct_transfer} units from you. You were left with ${e://Field/payoff_recipient} unit(s).",
+                "reasoning_justification_relevant": "Providing feedback on the outcome helps participants understand the results of their actions and the experiment's dynamics."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What role have you been assigned in the experiment?",
+                "question_id": "Q42",
+                "answer_instruction": "You have been assigned to Participant B (Recipient)."
+            },
+            {
+                "question": "What information is provided at the end of the economic experiment?",
+                "question_id": "Q43",
+                "answer_instruction": "Participant A took ${e://Field/direct_transfer} units from you. You were left with ${e://Field/payoff_recipient} unit(s)."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What decision did Participant A make regarding the delegate?",
+                "question_id": "Q85",
+                "answer_instruction": "Participant A chose not to engage a delegate.",
+                "data_information_knowledge_and_context": "Participant A (Decision-maker) chose to not engage a ${e://Field/delegate_type} delegate. Participant A will collect units from your endowment on their own.",
+                "reasoning_justification_relevant": "Understanding the decision-making process of Participant A is crucial for analyzing the experiment's outcomes."
+            },
+            {
+                "question": "What are the timing metrics recorded for the task?",
+                "question_id": "Q86",
+                "answer_instruction": "First Click, Last Click, Page Submit, Click Count.",
+                "data_information_knowledge_and_context": "Q86 Timing First Click (1) Last Click (2) Page Submit (3) Click Count (4)",
+                "reasoning_justification_relevant": "Timing metrics are essential for understanding participant engagement and response time during the task."
+            },
+            {
+                "question": "What was the outcome of the economic experiment for Participant A and C?",
+                "question_id": "Q63",
+                "answer_instruction": "Participant A took units on their own. Participant C did not earn any delegate fee.",
+                "data_information_knowledge_and_context": "Participant A took ${e://Field/direct_transfer} units from your own on their own. Therefore, Participant C did not earn any delegate fee.",
+                "reasoning_justification_relevant": "The outcome provides insights into the economic decisions and their impact on participants' earnings."
+            },
+            {
+                "question": "How many units were you left with after the experiment?",
+                "question_id": "Q63_units",
+                "answer_instruction": "You were left with a specific number of units.",
+                "data_information_knowledge_and_context": "You were left with ${e://Field/payoff_recipient} unit(s).",
+                "reasoning_justification_relevant": "Knowing the final units left with the participant helps in evaluating the experiment's financial impact on them."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What decision did Participant A make regarding the delegate?",
+                "question_id": "Q85",
+                "answer_instruction": "Participant A chose not to engage a delegate."
+            },
+            {
+                "question": "What are the timing metrics recorded for the task?",
+                "question_id": "Q86",
+                "answer_instruction": "First Click, Last Click, Page Submit, Click Count."
+            },
+            {
+                "question": "What was the outcome of the economic experiment for Participant A and C?",
+                "question_id": "Q63",
+                "answer_instruction": "Participant A took units on their own. Participant C did not earn any delegate fee."
+            },
+            {
+                "question": "How many units were you left with after the experiment?",
+                "question_id": "Q63_units",
+                "answer_instruction": "You were left with a specific number of units."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What type of delegate did Participant A choose to engage to collect units from their endowment?",
+                "question_id": "Q57_delegate_type",
+                "answer_instruction": "Specify the type of delegate chosen by Participant A.",
+                "data_information_knowledge_and_context": "Participant A (Decision-maker) chose to engage a ${e://Field/delegate_type} delegate to collect units from your endowment on their behalf.",
+                "reasoning_justification_relevant": "Understanding the type of delegate chosen is crucial to analyze decision-making strategies and delegation preferences in economic experiments."
+            },
+            {
+                "question": "How many units did Participant C take from you on behalf of Participant A?",
+                "question_id": "Q64_delegate_transfer",
+                "answer_instruction": "Provide the number of units taken by Participant C.",
+                "data_information_knowledge_and_context": "Participant C took ${e://Field/delegate_transfer} unit(s) from you on behalf of Participant A.",
+                "reasoning_justification_relevant": "This question helps assess the impact of delegation on resource allocation and participant outcomes in the experiment."
+            },
+            {
+                "question": "What fee did Participant C charge for taking units on behalf of Participant A?",
+                "question_id": "Q64_payoff_delegate",
+                "answer_instruction": "Specify the fee charged by Participant C.",
+                "data_information_knowledge_and_context": "Participant C took ${e://Field/delegate_transfer} unit(s) from you on behalf of Participant A, for a fee of ${e://Field/payoff_delegate} unit(s).",
+                "reasoning_justification_relevant": "The fee charged provides insights into the cost of delegation and its effect on the net outcome for participants."
+            },
+            {
+                "question": "How many units were you left with after Participant C's actions?",
+                "question_id": "Q64_payoff_recipient",
+                "answer_instruction": "State the number of units you were left with.",
+                "data_information_knowledge_and_context": "You were left with ${e://Field/payoff_recipient} unit(s).",
+                "reasoning_justification_relevant": "Determining the remaining units helps evaluate the final impact of the delegation process on the participant's resources."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What type of delegate did Participant A choose to engage to collect units from their endowment?",
+                "question_id": "Q57_delegate_type",
+                "answer_instruction": "Specify the type of delegate chosen by Participant A."
+            },
+            {
+                "question": "How many units did Participant C take from you on behalf of Participant A?",
+                "question_id": "Q64_delegate_transfer",
+                "answer_instruction": "Provide the number of units taken by Participant C."
+            },
+            {
+                "question": "What fee did Participant C charge for taking units on behalf of Participant A?",
+                "question_id": "Q64_payoff_delegate",
+                "answer_instruction": "Specify the fee charged by Participant C."
+            },
+            {
+                "question": "How many units were you left with after Participant C's actions?",
+                "question_id": "Q64_payoff_recipient",
+                "answer_instruction": "State the number of units you were left with."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is the role of Participant C in the experiment described in Q48?",
+                "question_id": "Q48_1",
+                "answer_instruction": "Explain that Participant C does not participate in this variation of the experiment and will receive a show-up fee.",
+                "data_information_knowledge_and_context": "Participant C does not participate in this variation of the experiment. Therefore, you will not be participating in the experiment. You will receive a bonus payment of ${e://Field/non_participation_showupfee_AUD} AUD as a show-up fee.",
+                "reasoning_justification_relevant": "Understanding the role of Participant C is crucial to comprehend the experimental setup and the compensation structure for non-participation."
+            },
+            {
+                "question": "What decision does Participant A have to make regarding Participant B's endowment in Q67?",
+                "question_id": "Q67_1",
+                "answer_instruction": "Describe the decision-making process of Participant A regarding the re-allocation of Participant B's endowment.",
+                "data_information_knowledge_and_context": "Participant A (Decision-maker) will decide how to re-allocate Participant B's initial endowment of ${e://Field/total_endowment} units. Either they take the units themselves or they hire you for a delegation fee to re-allocate the units on their behalf.",
+                "reasoning_justification_relevant": "This question is important to understand the decision-making dynamics and the role of delegation in the experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What is the role of Participant C in the experiment described in Q48?",
+                "question_id": "Q48_1",
+                "answer_instruction": "Explain that Participant C does not participate in this variation of the experiment and will receive a show-up fee."
+            },
+            {
+                "question": "What decision does Participant A have to make regarding Participant B's endowment in Q67?",
+                "question_id": "Q67_1",
+                "answer_instruction": "Describe the decision-making process of Participant A regarding the re-allocation of Participant B's endowment."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What decision did Participant A make regarding delegation?",
+                "question_id": "Q69",
+                "answer_instruction": "Participant A chose not to delegate the decision of how many units to take from Participant B.",
+                "data_information_knowledge_and_context": "Participant A chose to not delegate the decision of how many units to take from Participant B. Therefore, you will not be required to make any decisions in this game and will not receive any delegation fee.",
+                "reasoning_justification_relevant": "Understanding the decision-making process of Participant A is crucial for analyzing the dynamics of delegation and its impact on the experiment."
+            },
+            {
+                "question": "What feedback is provided at the end of the game?",
+                "question_id": "Q77",
+                "answer_instruction": "Participant A took a certain number of units from Participant B, and Participant B was left with a certain number of units. No delegate fee was earned.",
+                "data_information_knowledge_and_context": "Participant A took ${e://Field/direct_transfer} units from Participant B on their own. Therefore, you did not earn any delegate fee. Participant B was left with ${e://Field/payoff_recipient} unit(s).",
+                "reasoning_justification_relevant": "The feedback provides insight into the outcomes of the experiment, which is essential for evaluating the results and understanding the consequences of the decisions made."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "What decision did Participant A make regarding delegation?",
+                "question_id": "Q69",
+                "answer_instruction": "Participant A chose not to delegate the decision of how many units to take from Participant B."
+            },
+            {
+                "question": "What feedback is provided at the end of the game?",
+                "question_id": "Q77",
+                "answer_instruction": "Participant A took a certain number of units from Participant B, and Participant B was left with a certain number of units. No delegate fee was earned."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How many units will you take from Participant B on behalf of Participant A?",
+                "question_id": "Q71",
+                "answer_instruction": "Enter a number with a maximum of 2 decimal places.",
+                "data_information_knowledge_and_context": "Participant A chose to delegate the decision of how many units to take from Participant B. As the delegate for Participant A, your task is to take an amount from Participant B on behalf of Participant A. Please use the box below to indicate how many units (must be a number with a maximum of 2 decimal places) to take from Participant B. You will receive a fixed fee of $e://Field/fixed_fee from Participant A. Participant B is informed on who made the choice to take the amount. I will take from Participant B (0-$e://Field/total_endowment) units:",
+                "reasoning_justification_relevant": "This question is relevant as it assesses the decision-making process of the delegate in an economic experiment, reflecting on ethical and strategic considerations."
+            },
+            {
+                "question": "How many units did you take from Participant B on behalf of Participant A?",
+                "question_id": "Q78",
+                "answer_instruction": "Review the feedback on the outcome of the experiment.",
+                "data_information_knowledge_and_context": "You took $e://Field/delegate_transfer unit(s) from Participant B on behalf of Participant A, for a fee of $e://Field/payoff_delegate unit(s). Participant B was left with $e://Field/payoff_recipient unit(s).",
+                "reasoning_justification_relevant": "This question provides feedback on the outcome of the decision made, which is crucial for understanding the results of the economic experiment."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "85",
+        "final_items": [
+            {
+                "question": "How many units will you take from Participant B on behalf of Participant A?",
+                "question_id": "Q71",
+                "answer_instruction": "Enter a number with a maximum of 2 decimal places."
+            },
+            {
+                "question": "How many units did you take from Participant B on behalf of Participant A?",
+                "question_id": "Q78",
+                "answer_instruction": "Review the feedback on the outcome of the experiment."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "How many units will you take from Participant B on behalf of Participant A?",
+                "question_id": "Q75_DelegateTask",
+                "answer_instruction": "Indicate the number of units (must be a number with a maximum of 2 decimal places) to take from Participant B.",
+                "data_information_knowledge_and_context": "Participant A chose to delegate the decision of how many units to take from Participant B. As the delegate for Participant A, your task is to take an amount from Participant B on behalf of Participant A. You will receive a commission fee of ${e://Field/commission_fee} percent (%) from Participant A. Participant B is informed on who made the choice to take the amount. I will take from Participant B (0-${e://Field/total_endowment}) units.",
+                "reasoning_justification_relevant": "This question is relevant as it involves decision-making in a delegated task scenario, assessing the participant's understanding of their role and the implications of their choices."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "90",
+        "final_items": [
+            {
+                "question": "How many units will you take from Participant B on behalf of Participant A?",
+                "question_id": "Q75_DelegateTask",
+                "answer_instruction": "Indicate the number of units (must be a number with a maximum of 2 decimal places) to take from Participant B."
+            }
+        ]
+    },
+    {
+        "draft_items": [
+            {
+                "question": "What is your final payoff for the bonus payment in AUD?",
+                "question_id": "Q1",
+                "answer_instruction": "Click on the button below to continue.",
+                "data_information_knowledge_and_context": "Thank you for your participation in the economic game. Your submission has been received. Your final payoff for the bonus payment is ${e://Field/bonus_payment} AUD. To continue, please click on the button below:",
+                "reasoning_justification_relevant": "This question is important as it confirms the participant's understanding of their bonus payment, ensuring transparency and clarity in the economic game."
+            }
+        ],
+        "instruction_completeness": "90",
+        "ambiguity": "10",
+        "logical_consistency": "95",
+        "option_completeness": "100",
+        "final_items": [
+            {
+                "question": "What is your final payoff for the bonus payment in AUD?",
+                "question_id": "Q1",
+                "answer_instruction": "Click on the button below to continue."
+            }
+        ]
+    }
+]

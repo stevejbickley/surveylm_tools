@@ -1,0 +1,974 @@
+[
+    {
+        "items": [
+            {
+                "question": "What does the act specify about the application of other legislation?",
+                "question_id": "Q1",
+                "answer_instruction": "Summarize the sections of the act that describe how it interacts with other legislation.",
+                "data_information_knowledge_and_context": "This Act does not limit or otherwise affect the operation of any of the following— (a) the Research Involving Human Embryos and Prohibition of Human Cloning for Reproduction Act 2003; (b) the Surrogacy Act 2010; (c) the Status of Children Act 1978; (d) the Public Health Act 2005.",
+                "reasoning_justification_relevant": "Understanding the interaction with other legislation is crucial for comprehending the scope and limitations of the Act."
+            },
+            {
+                "question": "Who does the Act bind according to section 11?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain who is bound by the regulations of the Act.",
+                "data_information_knowledge_and_context": "This Act binds all persons, including the State and, to the extent the legislative power of the Parliament permits, the Commonwealth and the other States. However, the State, the Commonwealth or another State cannot be prosecuted for an offence against this Act.",
+                "reasoning_justification_relevant": "Identifying the entities bound by the Act is essential for understanding its jurisdiction and enforcement."
+            },
+            {
+                "question": "What are the requirements for a person to provide ART services?",
+                "question_id": "Q3",
+                "answer_instruction": "List the conditions under which a person can provide ART services.",
+                "data_information_knowledge_and_context": "A person must not provide an ART service unless the person is a licensed ART provider. Maximum penalty—200 penalty units or 2 years imprisonment.",
+                "reasoning_justification_relevant": "Clarifying the licensing requirements ensures compliance and legal operation within the field of assisted reproductive technology."
+            },
+            {
+                "question": "What restrictions are placed on advertising ART services?",
+                "question_id": "Q4",
+                "answer_instruction": "Describe the advertising restrictions for ART services as per the Act.",
+                "data_information_knowledge_and_context": "A person must not advertise or hold out that the person is a licensed ART provider unless the person is a licensed ART provider.",
+                "reasoning_justification_relevant": "Advertising restrictions help prevent misleading claims and ensure only authorized providers offer ART services."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is the penalty for not ensuring ART services are performed by or supervised by a medical practitioner?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide the maximum penalty in terms of penalty units or imprisonment duration.",
+                "data_information_knowledge_and_context": "Maximum penalty—400 penalty units or 2 years imprisonment.",
+                "reasoning_justification_relevant": "Understanding the legal implications for non-compliance with medical supervision in ART services is crucial for practitioners to adhere to regulations."
+            },
+            {
+                "question": "What must an ART provider do before providing ART services?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain the steps an ART provider must take according to the document.",
+                "data_information_knowledge_and_context": "An ART provider must inform a person referred to in column 1 of the following table about the matters stated opposite in column 2 before providing the person with an ART service stated opposite in column 3; and confirm that the person understands those matters before providing the service. Maximum penalty—200 penalty units.",
+                "reasoning_justification_relevant": "It is important for ART providers to understand their obligations for informing and confirming understanding with patients to ensure informed consent is obtained."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the extended matters for a person undergoing ART procedure that uses donated gametes or donated embryo?",
+                "question_id": "Q1",
+                "answer_instruction": "List the extended matters related to the ART procedure for a person using donated gametes or embryo, as described in the document.",
+                "data_information_knowledge_and_context": "Column 2 Matters - extended matters for person undergoing ART procedure that uses donated gametes or donated embryo.",
+                "reasoning_justification_relevant": "Understanding the extended matters is crucial for comprehending the regulatory framework surrounding ART procedures and ensuring compliance and ethical considerations are met."
+            },
+            {
+                "question": "What service is provided to an intended parent if a surrogate undergoes ART procedure that uses donated gametes or donated embryo?",
+                "question_id": "Q2",
+                "answer_instruction": "Identify the service described for intended parents in the ART procedure using donated gametes or embryo.",
+                "data_information_knowledge_and_context": "Column 3 Service - the ART procedure for intended parent if a surrogate undergoes ART procedure that uses donated gametes or donated embryo.",
+                "reasoning_justification_relevant": "Clarifying the services provided to intended parents helps in understanding their rights and the procedural aspects of surrogacy involving donated gametes or embryos."
+            },
+            {
+                "question": "What are the basic matters for a person providing their gametes other than as donated gametes?",
+                "question_id": "Q3",
+                "answer_instruction": "List the basic matters associated with a person providing their gametes, excluding cases where they are donated, according to the document.",
+                "data_information_knowledge_and_context": "Column 2 Matters - basic matters for person providing their gametes other than as donated gametes.",
+                "reasoning_justification_relevant": "Identifying basic matters helps in understanding the foundational legal and ethical considerations for individuals providing gametes under ART procedures."
+            },
+            {
+                "question": "What does 'extended matters' mean for a person who has already provided their gametes, other than as donated gametes?",
+                "question_id": "Q4",
+                "answer_instruction": "Explain the concept of 'extended matters' for individuals who have already provided their gametes, excluding donated cases.",
+                "data_information_knowledge_and_context": "Column 2 Matters - extended matters for person who has already provided their gametes, other than as donated gametes.",
+                "reasoning_justification_relevant": "This question helps elucidate the ongoing responsibilities and legal implications for individuals who have participated in ART processes beyond initial provision."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the obligations of ART providers in relation to collecting information about a person and their donor-conceived offspring?",
+                "question_id": "Q1_ART_Obligations_Information_Collection",
+                "answer_instruction": "List and explain the obligations of ART providers in collecting information as stated in the document.",
+                "data_information_knowledge_and_context": "(c) the ART provider’s obligations in relation to collecting information about the person and their donor-conceived offspring;",
+                "reasoning_justification_relevant": "Understanding the obligations of ART providers is crucial for ensuring compliance with legal and ethical standards in reproductive technologies."
+            },
+            {
+                "question": "What are the rights of a person to obtain information from the donor conception information register?",
+                "question_id": "Q2_Person_Rights_Information_Access",
+                "answer_instruction": "Describe the rights of individuals to access information from the donor conception information register as outlined in the document.",
+                "data_information_knowledge_and_context": "(e) the person’s rights to obtain information from the donor conception information register about themself, the donor-conceived offspring or other persons;",
+                "reasoning_justification_relevant": "Knowing these rights is important for individuals seeking transparency and access to personal and familial information."
+            },
+            {
+                "question": "What counselling services must an ART provider offer to a person proposing to donate a gamete or embryo?",
+                "question_id": "Q3_Counselling_Services_Gamete_Donation",
+                "answer_instruction": "Detail the counselling services required for persons proposing to donate a gamete or embryo as specified in the document.",
+                "data_information_knowledge_and_context": "15(1) An ART provider must provide counselling services under this section to a person who proposes to donate a gamete or an embryo for an ART procedure...",
+                "reasoning_justification_relevant": "Counselling is a critical component of informed consent and ethical practice in assisted reproductive technologies."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the penalties for an ART provider not making counseling services available for procedures involving donated gametes or embryos?",
+                "question_id": "Q1_ART_Counseling_Penalties",
+                "answer_instruction": "List the maximum penalties for not providing counseling services in such cases.",
+                "data_information_knowledge_and_context": "An ART provider must make counselling services available if a surrogate proposes to undergo an ART procedure that uses donated gametes or a donated embryo. Maximum penalty—50 penalty units.",
+                "reasoning_justification_relevant": "Understanding the legal penalties for non-compliance helps ensure ART providers adhere to regulations, promoting ethical practices."
+            },
+            {
+                "question": "What are the requirements for obtaining consent for ART procedures?",
+                "question_id": "Q2_ART_Consent_Requirements",
+                "answer_instruction": "Explain the steps required for an ART provider to obtain consent according to the document.",
+                "data_information_knowledge_and_context": "An ART provider must not do anything for which the consent of a person is required unless it is done with the prior written consent of the person and in a way consistent with that consent. Maximum penalty—200 penalty units.",
+                "reasoning_justification_relevant": "Obtaining informed consent is a fundamental ethical requirement in medical procedures, ensuring respect for patient autonomy."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the conditions under which the consent of a gamete provider is required?",
+                "question_id": "Q1",
+                "answer_instruction": "List all the conditions specified in the document where the consent of a gamete provider is necessary.",
+                "data_information_knowledge_and_context": "The document states that the consent of a gamete provider is required for the use in an ART procedure, the storage period of gametes or embryos, supply to another person, and export from Queensland.",
+                "reasoning_justification_relevant": "Understanding the consent requirements is crucial for ethical and legal compliance in assisted reproductive technology."
+            },
+            {
+                "question": "When does the consent of a gamete provider expire according to the document?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain the conditions under which the consent expires as per the document.",
+                "data_information_knowledge_and_context": "The document specifies that consent expires 5 years after it was given or last confirmed, provided an ART provider has not confirmed the consent.",
+                "reasoning_justification_relevant": "Knowing the expiration conditions helps in managing legal timelines and ensuring continued consent."
+            },
+            {
+                "question": "Does the consent of a gamete provider extend beyond their death?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the provision related to the expiration of consent after the death of a gamete provider.",
+                "data_information_knowledge_and_context": "According to the document, the consent to use gametes after the provider's death does not expire with their death.",
+                "reasoning_justification_relevant": "This information is vital for posthumous use of gametes and understanding inheritance of consent."
+            },
+            {
+                "question": "How can the consent of a gamete provider be confirmed by an ART provider?",
+                "question_id": "Q4",
+                "answer_instruction": "Detail the process or conditions under which an ART provider confirms consent.",
+                "data_information_knowledge_and_context": "The document outlines that the confirmation process by an ART provider is necessary for validating ongoing consent.",
+                "reasoning_justification_relevant": "Confirmation procedures ensure that the ART practices are aligned with ethical and legal standards."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What steps must an ART provider take to confirm the consent of a gamete provider?",
+                "question_id": "Q1_ART_Consent_Confirmation",
+                "answer_instruction": "Provide details on the confirmation process as outlined in the document.",
+                "data_information_knowledge_and_context": "The ART provider receives a notice of confirmation from the gamete provider or has taken reasonable steps to confirm the consent.",
+                "reasoning_justification_relevant": "Understanding the procedure for confirming consent is crucial for compliance with the ART regulations and ensures ethical practices."
+            },
+            {
+                "question": "When is it not necessary for an ART provider to confirm the consent of a gamete provider?",
+                "question_id": "Q2_ART_Consent_Not_Required",
+                "answer_instruction": "List the conditions under which consent confirmation is not needed.",
+                "data_information_knowledge_and_context": "Consent is not required if the ART provider knows or believes the gamete provider has died or as prescribed by regulation.",
+                "reasoning_justification_relevant": "Knowing exceptions to consent requirements helps in navigating legal and ethical obligations in specific situations."
+            },
+            {
+                "question": "What must be included in the consent of a gamete provider for donated gametes or embryos?",
+                "question_id": "Q3_Gamete_Provider_Consent_Inclusions",
+                "answer_instruction": "Identify the elements that must be included in the consent according to the document.",
+                "data_information_knowledge_and_context": "The consent must include the maximum number of families, the maximum storage period, and any other regulation-prescribed matters.",
+                "reasoning_justification_relevant": "Details on consent inclusions are important for ensuring that all legal and ethical guidelines are met when using donated gametes or embryos."
+            },
+            {
+                "question": "Can the consent of the gamete provider limit the use of donated gametes or embryos based on protected attributes?",
+                "question_id": "Q4_Consent_Limits_Protected_Attributes",
+                "answer_instruction": "Explain whether or not limitations can be set based on protected attributes.",
+                "data_information_knowledge_and_context": "The consent cannot limit the use based on protected attributes of the persons provided with ART services.",
+                "reasoning_justification_relevant": "Understanding this restriction is vital to ensure non-discriminatory practices in ART services."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is required for a person to undergo an ART procedure?",
+                "question_id": "consent_ART_procedure_01",
+                "answer_instruction": "Explain the necessity of consent for an ART procedure and any regulations that may apply to different cycles or stages.",
+                "data_information_knowledge_and_context": "\"Consent of person undergoing ART procedure (1) The consent of a person is required for an ART procedure that the person undergoes. (2) A regulation may require consent for different cycles or other stages of an ART procedure.\"",
+                "reasoning_justification_relevant": "Understanding the legal requirement for consent ensures that ART procedures are conducted ethically and in accordance with regulations, safeguarding individual rights."
+            },
+            {
+                "question": "How can consent be modified or withdrawn under the ART regulations?",
+                "question_id": "withdrawal_variation_consent_02",
+                "answer_instruction": "Describe the conditions under which consent can be modified or withdrawn and the process involved.",
+                "data_information_knowledge_and_context": "\"Withdrawal or variation of consent (1) The consent of a gamete provider under this division may be modified or withdrawn at any time until... (2) A gamete provider may modify or withdraw consent by notice given to an ART provider... (3) If an ART provider receives notice of the modification or withdrawal... it must give the other provider notice...\"",
+                "reasoning_justification_relevant": "Highlighting the flexibility and process for modifying or withdrawing consent is crucial for maintaining autonomy and control over reproductive choices."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the requirements for verifying the identity of a gamete provider?",
+                "question_id": "Q1",
+                "answer_instruction": "Describe the steps an ART provider must take to verify the identity of a gamete provider as per the document.",
+                "data_information_knowledge_and_context": "The requirements relating to the giving, modifying or withdrawing of consent under this division by a gamete provider include the ART provider concerned taking reasonable steps to verify the identity of the person purportedly giving, modifying or withdrawing consent as a gamete provider.",
+                "reasoning_justification_relevant": "Verification of identity is crucial in ART procedures to ensure that consent is properly given and to prevent legal and ethical issues."
+            },
+            {
+                "question": "Are ART providers allowed to use gametes from close family members?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain whether ART providers can use gametes from close family members and cite the penalties for violation.",
+                "data_information_knowledge_and_context": "An ART provider must not use a gamete to create an embryo if the ART provider knows that the gamete provider is a close family member of the other person whose gamete is used to create the embryo. Maximum penalty—400 penalty units or 2 years imprisonment.",
+                "reasoning_justification_relevant": "This regulation prevents potential ethical and genetic complications that may arise from using gametes of close family members."
+            },
+            {
+                "question": "Can ART services be provided to children?",
+                "question_id": "Q3",
+                "answer_instruction": "Discuss the prohibition of ART services for children as stated in the document.",
+                "data_information_knowledge_and_context": "An ART provider must not carry out an ART procedure if the person undergoing the procedure is a child.",
+                "reasoning_justification_relevant": "Providing ART services to children raises significant ethical concerns and legal implications, making it a critical regulation."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is the maximum penalty for obtaining a gamete from a child for use in an ART procedure?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide the maximum penalty mentioned in the document.",
+                "data_information_knowledge_and_context": "Maximum penalty—400 penalty units or 2 years imprisonment.",
+                "reasoning_justification_relevant": "Understanding the penalties related to ART procedures involving children is crucial for legal compliance."
+            },
+            {
+                "question": "Under what conditions does subsection (1) not apply to an ART provider obtaining a gamete from a child?",
+                "question_id": "Q2",
+                "answer_instruction": "List the conditions under which subsection (1) does not apply.",
+                "data_information_knowledge_and_context": "Subsection (1) does not apply if a medical practitioner has certified a risk of infertility before adulthood, and the gamete is stored for future use.",
+                "reasoning_justification_relevant": "This clarifies exceptions to the general rule, which is important for ethical and legal decision-making in ART."
+            },
+            {
+                "question": "Is sex selection in ART procedures allowed according to the document?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the prohibition or allowance of sex selection in ART procedures.",
+                "data_information_knowledge_and_context": "An ART provider must not use a particular gamete or embryo for the purpose of producing a child of a particular sex.",
+                "reasoning_justification_relevant": "Understanding the ethical guidelines around sex selection helps ensure ART practices align with legal standards."
+            },
+            {
+                "question": "What is the penalty for using a particular gamete or embryo for sex selection in ART?",
+                "question_id": "Q4",
+                "answer_instruction": "State the penalty for using gametes or embryos for sex selection.",
+                "data_information_knowledge_and_context": "Maximum penalty—240 penalty units or 2 years imprisonment.",
+                "reasoning_justification_relevant": "Knowing legal repercussions helps enforce regulations against unethical ART practices."
+            },
+            {
+                "question": "When is it permissible to select the sex of a child in ART procedures?",
+                "question_id": "Q5",
+                "answer_instruction": "Describe the circumstances under which sex selection is permitted.",
+                "data_information_knowledge_and_context": "Subsection (1) does not apply if it is necessary to reduce the risk of genetic abnormalities or diseases.",
+                "reasoning_justification_relevant": "Identifying exceptions to the prohibition on sex selection is important for addressing genetic health concerns."
+            },
+            {
+                "question": "What is the limit on the number of donor-related Australian families for a single donor?",
+                "question_id": "Q6",
+                "answer_instruction": "Provide the limit on the number of families related to a single donor.",
+                "data_information_knowledge_and_context": "An ART provider must not result in more than 10 donor-related Australian families.",
+                "reasoning_justification_relevant": "Understanding family limits helps prevent complications in genetic relationships and legal issues."
+            },
+            {
+                "question": "Under what conditions can an ART provider be penalized for exceeding the donor family limit?",
+                "question_id": "Q7",
+                "answer_instruction": "Explain the conditions under which penalties apply for exceeding donor family limits.",
+                "data_information_knowledge_and_context": "The provider knew it would result in more than 10 families or did not exercise due diligence.",
+                "reasoning_justification_relevant": "Ensuring due diligence helps maintain ethical standards in ART practices."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What constitutes a donor-related Australian family according to subsection (1)(a)?",
+                "question_id": "Q1",
+                "answer_instruction": "Define the criteria for a donor-related Australian family based on the document.",
+                "data_information_knowledge_and_context": "For subsection (1)(a), donor-related Australian families are— (a) families that include a person born as a result of an ART procedure carried out in Australia using a gamete obtained from the same donor or using an embryo created from a gamete obtained from the same donor; and (b) the family of the donor if the donor has a child who was born in Australia but was not donor-conceived.",
+                "reasoning_justification_relevant": "Understanding the definition of donor-related Australian families is crucial for legal and procedural clarity within the context of assisted reproductive technology regulations."
+            },
+            {
+                "question": "What actions are included in due diligence by an ART provider under subsection (1)(b)?",
+                "question_id": "Q2",
+                "answer_instruction": "List the actions that constitute due diligence for ART providers as described in the document.",
+                "data_information_knowledge_and_context": "For subsection (1)(b), due diligence by an ART provider includes— (a) searching the provider’s records; and (b) making reasonable inquiries of the donor; and (c) if the provider has reason to believe that another ART provider in Australia has obtained a gamete or an embryo from the donor—requesting information from that other provider.",
+                "reasoning_justification_relevant": "Due diligence is essential to ensure compliance with regulations and to maintain ethical standards in assisted reproductive technology practices."
+            },
+            {
+                "question": "What must an ART provider do at the request of another ART provider regarding due diligence for a stated donor?",
+                "question_id": "Q3",
+                "answer_instruction": "Explain the obligations of an ART provider when another provider requests due diligence information.",
+                "data_information_knowledge_and_context": "An ART provider must, at the request of another ART provider who is undertaking due diligence for subsection (1)(b) in relation to a stated donor, give the other provider information it has about ART procedures, and donated gametes or donated embryos, that would be relevant to determining the number of donor-related Australian families in relation to the stated donor.",
+                "reasoning_justification_relevant": "This ensures transparency and cooperation among ART providers, which is vital for tracking donor-related families and maintaining accurate records."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the conditions under which an ART provider may use a gamete or embryo after the death of the gamete provider?",
+                "question_id": "Q1_ART_GameteUse_AfterDeath",
+                "answer_instruction": "List the conditions that must be met for an ART provider to use a gamete or embryo after the gamete provider has died.",
+                "data_information_knowledge_and_context": "An ART provider must not use a gamete or an embryo in an ART procedure if the ART provider knows, or ought reasonably to know, that the gamete provider has died unless: (a) the gamete provider has consented to the use of the gamete or embryo after their death; and (b) the person who undergoes the ART procedure has consented to the use of the gamete or embryo after being notified that the gamete provider has died.",
+                "reasoning_justification_relevant": "Understanding these conditions is crucial for compliance with legal and ethical standards in assisted reproductive technology."
+            },
+            {
+                "question": "What is the maximum penalty for an ART provider who violates the conditions for using gametes or embryos after the gamete provider’s death?",
+                "question_id": "Q2_ART_Penalty_Violation",
+                "answer_instruction": "State the maximum penalty for violating these conditions.",
+                "data_information_knowledge_and_context": "Maximum penalty—200 penalty units.",
+                "reasoning_justification_relevant": "Knowing the penalties involved helps ART providers understand the legal implications and severity of non-compliance."
+            },
+            {
+                "question": "Is the consent of a surrogate required when using gametes or embryos after the death of the gamete provider?",
+                "question_id": "Q3_ART_Surrogate_Consent",
+                "answer_instruction": "Explain whether surrogate consent is required in this situation.",
+                "data_information_knowledge_and_context": "If a surrogate undergoes the ART procedure, the consent of the intended parents and not the surrogate is required under subsection (1)(b).",
+                "reasoning_justification_relevant": "This question clarifies the roles and rights of surrogates and intended parents in ART procedures."
+            },
+            {
+                "question": "What steps must an ART provider take to ensure a gamete provider is alive before using their gametes or embryos?",
+                "question_id": "Q4_ART_Provider_Steps",
+                "answer_instruction": "Describe the steps an ART provider must take before using gametes or embryos.",
+                "data_information_knowledge_and_context": "An ART provider must take reasonable steps to find out whether the gamete provider is still alive if the gamete, or the gamete used to create the embryo, was obtained from the gamete provider more than 5 years before the ART procedure.",
+                "reasoning_justification_relevant": "Ensuring the gamete provider is alive is important for legal and ethical compliance in ART services."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What steps are considered reasonable to find out whether a gamete provider is still alive?",
+                "question_id": "Q1",
+                "answer_instruction": "List the steps that qualify as reasonable inquiries under subsection (5).",
+                "data_information_knowledge_and_context": "(5) For subsection (3), reasonable steps to find out whether a gamete provider is still alive include— (a) making an inquiry as to whether the death of the gamete provider has been officially recorded in the Queensland register of deaths; and (b) making other inquiries prescribed by regulation.",
+                "reasoning_justification_relevant": "Understanding what constitutes reasonable steps is crucial for compliance with legal requirements regarding the use of gametes in ART procedures."
+            },
+            {
+                "question": "What is the time limit on the use of donated gametes or embryos in ART procedures?",
+                "question_id": "Q2",
+                "answer_instruction": "Specify the time limits for using donated gametes and embryos in ART procedures as outlined in section 27(1).",
+                "data_information_knowledge_and_context": "27 (1) An ART provider must not, without the written approval of the chief executive— (a) use a donated gamete in an ART procedure if it was obtained from the gamete provider more than 15 years before the procedure; or (b) use a donated embryo in an ART procedure if a gamete used to create the embryo was obtained more than 15 years before the procedure. Maximum penalty—100 penalty units.",
+                "reasoning_justification_relevant": "The time limit is essential for ensuring the ethical and safe use of biological materials in reproductive technologies."
+            },
+            {
+                "question": "What penalties are associated with the misuse of donated gametes or embryos?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the penalties for using donated gametes or embryos beyond the specified time limits.",
+                "data_information_knowledge_and_context": "Maximum penalty—100 penalty units (mentioned twice, once for each clause in section 27).",
+                "reasoning_justification_relevant": "Penalties serve as deterrents and are crucial for enforcing compliance with ART regulations."
+            },
+            {
+                "question": "Under what conditions can the chief executive approve the use of donated gametes or embryos beyond the specified time limits?",
+                "question_id": "Q4",
+                "answer_instruction": "Explain the conditions under which the chief executive may grant approval for using older donated gametes or embryos.",
+                "data_information_knowledge_and_context": "(2) The chief executive may give approval to the use of the donated gamete or donated embryo if satisfied there are reasonable grounds for doing so.",
+                "reasoning_justification_relevant": "Exceptions to the rule provide flexibility and allow for special circumstances to be considered in ART procedures."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the conditions under which a person is considered unresponsive in the context of gamete retrieval?",
+                "question_id": "Q1_ART2024",
+                "answer_instruction": "Provide a detailed explanation of the criteria that determine a person's unresponsiveness according to the Assisted Reproductive Technology Bill 2024.",
+                "data_information_knowledge_and_context": "A person is unresponsive if the person's respiration or circulation of blood is being maintained in a hospital by artificial means; and a medical practitioner has certified in writing that they have carried out a clinical examination of the person and that they are of the opinion that the person would die if the artificial means of respiration or circulation of blood was withdrawn.",
+                "reasoning_justification_relevant": "Understanding the conditions of unresponsiveness is crucial for ethical and legal considerations in the retrieval of gametes, ensuring the process respects the rights and conditions specified by law."
+            },
+            {
+                "question": "Under what circumstances can gametes be retrieved from a deceased or unresponsive person?",
+                "question_id": "Q2_ART2024",
+                "answer_instruction": "List and explain the conditions that authorize the retrieval of gametes as per the Assisted Reproductive Technology Bill 2024.",
+                "data_information_knowledge_and_context": "A gamete may be retrieved from a deceased or an unresponsive person by, or under the supervision of, a medical practitioner for use in an ART procedure for the person’s spouse. The retrieval is authorized if the person had consented to the retrieval or had not expressly objected to the posthumous use of their gametes for their spouse.",
+                "reasoning_justification_relevant": "Clarifying the legal and ethical boundaries for gamete retrieval ensures compliance with the law and respects the autonomy and wishes of individuals regarding posthumous reproduction."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "Under what conditions can the retrieval of a gamete from a deceased or unresponsive person be authorized?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the conditions under which the retrieval is authorized, including the roles of the spouse or family members and any exceptional circumstances.",
+                "data_information_knowledge_and_context": "The retrieval of a gamete from a deceased or an unresponsive person is not authorised under this division unless the retrieval is requested by—(a) the spouse of the person; or (b) in the exceptional circumstances described in subsection (2)—any member of the family of the person or spouse acting on behalf of the spouse.",
+                "reasoning_justification_relevant": "Understanding the conditions for gamete retrieval is crucial for ethical and legal considerations in assisted reproductive technology, ensuring that decisions are made by authorized individuals or under defined exceptional circumstances."
+            },
+            {
+                "question": "What are the exceptional circumstances under which a family member can request the retrieval of a gamete?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the exceptional circumstances that allow a family member to act on behalf of the spouse in requesting gamete retrieval.",
+                "data_information_knowledge_and_context": "The exceptional circumstances are that an urgent decision must be made for the gamete to be successfully used in any future ART procedure and the spouse—(a) is incapacitated and can not reasonably make an informed decision about the retrieval of the gamete; or (b) can not be contacted despite reasonable attempts to do so.",
+                "reasoning_justification_relevant": "Identifying the exceptional circumstances provides clarity on when family members can intervene, ensuring that the process respects both legal and ethical boundaries in urgent situations."
+            },
+            {
+                "question": "What is the role of an independent review body in the use of retrieved gametes?",
+                "question_id": "Q3",
+                "answer_instruction": "Outline the responsibilities and composition requirements of the independent review body involved in authorizing the use of retrieved gametes.",
+                "data_information_knowledge_and_context": "An ART provider may use a gamete retrieved from a deceased or an unresponsive person under this division in an ART procedure for the person’s spouse if its use has been authorised by an independent review body under this section. The independent review body is a body—(a) that is constituted by 1 or more persons who are not engaged by the ART provider in providing ART services; and (b) that complies with any requirement prescribed by regulation.",
+                "reasoning_justification_relevant": "The independent review body plays a critical role in ensuring that the use of retrieved gametes is ethically and legally justified, providing an unbiased assessment that safeguards the interests of all parties involved."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What factors must the independent review body consider when deciding to authorize the use of a retrieved gamete in an ART procedure?",
+                "question_id": "Q1_ART_Factors",
+                "answer_instruction": "List the factors that the independent review body must consider according to the document.",
+                "data_information_knowledge_and_context": "The independent review body must consider the following matters when deciding whether to authorise the use of the retrieved gamete in an ART procedure— (a) whether the spouse has the capacity to consent to the procedure; (b) whether the spouse has undertaken appropriate counselling; (c) the best interests of any child born as a result of the procedure, including— (i) whether the spouse has the capacity to provide for the child’s emotional, intellectual and other needs; and (ii) whether the child is likely to have safe and stable living arrangements; (d) any other matter the independent review body considers appropriate.",
+                "reasoning_justification_relevant": "Understanding the factors considered by the review body is crucial for ensuring ethical compliance and safeguarding the interests of all parties involved in ART procedures."
+            },
+            {
+                "question": "Under what conditions can a gamete be retrieved from a deceased person according to the document?",
+                "question_id": "Q2_Gamete_Retrieval_Conditions",
+                "answer_instruction": "Describe the conditions under which a gamete can be retrieved from a deceased person as stated in the document.",
+                "data_information_knowledge_and_context": "A gamete is not authorised to be retrieved from a deceased person under this division if the death is required by law to be reported to a coroner, or a coroner is investigating the death, unless— (a) a coroner has given consent for the retrieval of the gamete; or",
+                "reasoning_justification_relevant": "This question is important to ensure legal and ethical standards are met in sensitive situations involving deceased individuals."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information must an ART provider collect for all gametes?",
+                "question_id": "Q1_ART_Info_All_Gametes",
+                "answer_instruction": "List the required information for all gametes.",
+                "data_information_knowledge_and_context": "An ART provider must collect the following information before obtaining gametes for an ART procedure or for storage for future ART procedures— (a) for all gametes— (i) the gamete provider’s full name; and (ii) the gamete provider’s residential address, phone number and email address; and (iii) the gamete provider’s date and place of birth; and (iv) any other information prescribed by regulation;",
+                "reasoning_justification_relevant": "This question is relevant to ensure compliance with legal requirements for ART providers and to maintain accurate records for future reference."
+            },
+            {
+                "question": "What additional information is required for donated gametes?",
+                "question_id": "Q2_ART_Info_Donated_Gametes",
+                "answer_instruction": "Specify the additional information required for donated gametes.",
+                "data_information_knowledge_and_context": "For donated gametes— (i) the donor’s ethnicity and physical characteristics; and (ii) the donor’s relevant medical history;",
+                "reasoning_justification_relevant": "Understanding the specific requirements for donated gametes is important for legal compliance and ensuring the safety and suitability of the gametes for ART procedures."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the requirements for ART providers when transferring gametes or embryos to another ART provider?",
+                "question_id": "Q1_ART_Transfer_Requirements",
+                "answer_instruction": "List the specific obligations of ART providers during the transfer of gametes or embryos to another provider.",
+                "data_information_knowledge_and_context": "This section applies when an ART provider supplies gametes or embryos to another ART provider or receives gametes or embryos from another ART provider, whether the other provider provides ART services in or outside Queensland. The ART provider must— (a) when supplying the gametes or embryos to the other ART provider—transfer to the other provider a copy of the consents and other information they have collected in relation to the gametes or embryos; and (b) when receiving the gametes or embryos from the other provider—obtain from the other provider a copy of the consents and other information that the other provider has collected in relation to the gametes or embryos.",
+                "reasoning_justification_relevant": "Understanding these requirements ensures compliance with regulations and facilitates the ethical and legal exchange of reproductive materials between providers."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information must an ART provider collect about a person undergoing an ART procedure?",
+                "question_id": "Q1_ART_Info_Collection",
+                "answer_instruction": "List the specific details required to be collected according to the document.",
+                "data_information_knowledge_and_context": "An ART provider must collect the following information about a person who undergoes an ART procedure: the person’s full name, residential address, phone number, email address, date and place of birth, and the full name and date of birth of any spouse of the person at the time of the procedure.",
+                "reasoning_justification_relevant": "Understanding the specific information required is crucial for compliance with regulations and ensuring all necessary data is collected for legal and procedural purposes."
+            },
+            {
+                "question": "What are the requirements for collecting information if a donated gamete or embryo is used in an ART procedure?",
+                "question_id": "Q2_Donated_Gamete_Info_Collection",
+                "answer_instruction": "Explain the steps and information that must be collected when a donated gamete or embryo is used.",
+                "data_information_knowledge_and_context": "If an ART provider uses a donated gamete or donated embryo in an ART procedure, the provider must take reasonable steps to collect information on whether a person became pregnant as a result of the procedure within 4 months after the procedure; and whether a child was born as a result of the procedure within 15 months after the procedure, including the child’s full name, sex, and date and place of birth.",
+                "reasoning_justification_relevant": "This information is necessary to track the outcomes of ART procedures involving donated materials, ensuring accountability and traceability."
+            },
+            {
+                "question": "How long must an ART provider keep records as required by the document?",
+                "question_id": "Q3_Record_Keeping_Duration",
+                "answer_instruction": "State the duration for which records must be kept according to the document.",
+                "data_information_knowledge_and_context": "An ART provider must keep the records required by this section for at least 99 years.",
+                "reasoning_justification_relevant": "The duration for record-keeping is significant for ensuring long-term accountability and availability of information for future reference."
+            },
+            {
+                "question": "What information must be recorded about each gamete or embryo in the provider's possession?",
+                "question_id": "Q4_Gamete_Embryo_Record_Info",
+                "answer_instruction": "Identify the specific information that must be recorded about each gamete or embryo.",
+                "data_information_knowledge_and_context": "An ART provider must keep a record of the information the ART provider is required under this division to collect about the gamete or embryo before it.",
+                "reasoning_justification_relevant": "Accurate record-keeping of gametes and embryos is critical for maintaining integrity and traceability in ART procedures."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information must an ART provider keep about its ART procedures?",
+                "question_id": "Q1_ART_Procedure_Info",
+                "answer_instruction": "List the types of information required to be kept by the ART provider regarding ART procedures.",
+                "data_information_knowledge_and_context": "An ART provider must keep a record of the following information about its ART procedures: (a) the information the ART provider is required under this division to collect about the persons who undergo those procedures; (b) for a procedure using a donated gamete or donated embryo—the place where the procedure was carried out.",
+                "reasoning_justification_relevant": "This question is relevant to ensure compliance with regulations and to maintain transparency and traceability of ART procedures."
+            },
+            {
+                "question": "What details must be recorded about each child born as a result of ART procedures?",
+                "question_id": "Q2_Child_Info_ART",
+                "answer_instruction": "Identify the specific details that need to be recorded about children born from ART procedures.",
+                "data_information_knowledge_and_context": "An ART provider must keep a record of the following information about each child the provider knows was born as a result of its ART procedures: (a) the child’s full name, sex and date and place of birth; (b) the full name, residential address, phone number and email address of the person who gave birth to the child; (c) if a donated gamete or donated embryo was used in the ART procedure—the donor’s full name and date and place of birth.",
+                "reasoning_justification_relevant": "This question is relevant for ensuring that there is a comprehensive record of children born through ART, which is important for legal, medical, and social reasons."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the conditions under which an ART provider may disclose health information?",
+                "question_id": "Q1_ART_Disclosure_Conditions",
+                "answer_instruction": "List the conditions as specified in the document.",
+                "data_information_knowledge_and_context": "An ART provider may disclose health information if a medical practitioner certifies that the disclosure is necessary to prevent or reduce a serious risk to someone’s life or health, or to warn a person about a health condition that may be harmful to the person or their descendants.",
+                "reasoning_justification_relevant": "Understanding the conditions for disclosing health information is crucial for ensuring compliance with regulations and protecting patient confidentiality."
+            },
+            {
+                "question": "What does Section 37 of the Assisted Reproductive Technology Bill 2024 prohibit regarding records?",
+                "question_id": "Q2_Section37_Record_Destruction",
+                "answer_instruction": "Explain what is prohibited under Section 37 regarding records.",
+                "data_information_knowledge_and_context": "Section 37 prohibits the destruction of records that an ART provider is required to keep or any record of information required to be provided to the registrar, with a maximum penalty of 400 penalty units for violations.",
+                "reasoning_justification_relevant": "Knowledge of record management policies is essential for ART providers to ensure they are in compliance with legal requirements and avoid penalties."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "To whom may the ART provider disclose health information about a donor?",
+                "question_id": "Q1_ART_Disclosure_Donor",
+                "answer_instruction": "List the categories of individuals to whom the ART provider may disclose health information about a donor.",
+                "data_information_knowledge_and_context": "The ART provider may disclose health information about a donor, or about a relative of a donor, to any of the following: a donor-conceived person, a descendant of a donor-conceived person, a parent or other person with parental responsibility, a person who is pregnant as a result of an ART procedure, a person who has a gamete donated by the donor in storage with an ART provider, any other person prescribed by regulation.",
+                "reasoning_justification_relevant": "Understanding the specific categories of individuals who can receive health information is crucial for legal compliance and ethical transparency in assisted reproductive technology."
+            },
+            {
+                "question": "Who may receive health information about a donor-conceived person from the ART provider?",
+                "question_id": "Q2_ART_Disclosure_Donor_Conceived",
+                "answer_instruction": "Specify the categories of individuals who may receive health information about a donor-conceived person.",
+                "data_information_knowledge_and_context": "The ART provider may disclose health information about a donor-conceived person, or a relative of a donor-conceived person, to any of the following: the donor, a donor-conceived sibling, a parent or other person with parental responsibility, a person who is pregnant as a result of an ART procedure, a person who has a gamete donated by the same donor in storage with an ART provider, any other person prescribed by regulation.",
+                "reasoning_justification_relevant": "Identifying who can access personal health information about donor-conceived individuals helps ensure that privacy rights are respected and that information is shared responsibly."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "Under what conditions can the chief executive disclose health information to a person authorized by an ART provider?",
+                "question_id": "Q1",
+                "answer_instruction": "List the conditions under which the disclosure is permissible, as outlined in the document.",
+                "data_information_knowledge_and_context": "The chief executive may disclose health information if the ART provider has not disclosed it and a medical practitioner certifies the necessity to prevent or reduce health risks or warn about harmful health conditions.",
+                "reasoning_justification_relevant": "This question assesses understanding of the specific legal conditions under which sensitive health information can be disclosed, reflecting the balance between privacy and health safety."
+            },
+            {
+                "question": "Who must disclose health information on behalf of the chief executive?",
+                "question_id": "Q2",
+                "answer_instruction": "Identify the party responsible for making the disclosure on behalf of the chief executive.",
+                "data_information_knowledge_and_context": "A disclosure of health information by the chief executive is to be made by a medical practitioner on behalf of the chief executive.",
+                "reasoning_justification_relevant": "Understanding the procedural responsibilities for disclosing health information is critical in ensuring compliance with legal frameworks."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What does 'approved way' mean in the context of making an application or giving a notice?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the definition of 'approved way' as provided in the document.",
+                "data_information_knowledge_and_context": "In this part—approved way, of making an application or giving a notice, means a way that is—(a) approved by the registrar; and (b) published on the department’s website or www.qld.gov.au.",
+                "reasoning_justification_relevant": "Understanding what constitutes an 'approved way' is essential for adhering to legal and procedural requirements when making applications or giving notices."
+            },
+            {
+                "question": "What is the definition of 'contact information' for a person according to the document?",
+                "question_id": "Q2",
+                "answer_instruction": "Provide the elements included in 'contact information' for a person as defined in the document.",
+                "data_information_knowledge_and_context": "contact information, for a person, means the person’s residential address, phone number or email address or any other way the person may be contacted.",
+                "reasoning_justification_relevant": "Knowing what constitutes 'contact information' is crucial for ensuring proper communication and record-keeping."
+            },
+            {
+                "question": "How is 'donor-conceived' defined in relation to a person in this document?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the meaning of 'donor-conceived' as stated in the document.",
+                "data_information_knowledge_and_context": "donor-conceived, in relation to a person, means a person born as a result of a donor conception ART procedure or a private donor conception procedure.",
+                "reasoning_justification_relevant": "This definition clarifies the legal and procedural context for identifying individuals born through donor conception methods."
+            },
+            {
+                "question": "What are 'donor-conceived siblings'?",
+                "question_id": "Q4",
+                "answer_instruction": "Explain what is meant by 'donor-conceived siblings' according to the document.",
+                "data_information_knowledge_and_context": "donor-conceived siblings means any 2 persons—(a) who are both donor-conceived persons; and (b) who were both born using at least 1 gamete from the same donor.",
+                "reasoning_justification_relevant": "Understanding the concept of 'donor-conceived siblings' is important for familial and legal considerations in donor conception cases."
+            },
+            {
+                "question": "What does 'donor conception ART procedure' refer to?",
+                "question_id": "Q5",
+                "answer_instruction": "Define 'donor conception ART procedure' as per the document.",
+                "data_information_knowledge_and_context": "donor conception ART procedure means an ART procedure carried out by an ART provider that uses a donated gamete or donated embryo.",
+                "reasoning_justification_relevant": "Clarifying 'donor conception ART procedure' helps in understanding the technical and procedural aspects of assisted reproductive technology."
+            },
+            {
+                "question": "What is the 'donor’s ID code' used for?",
+                "question_id": "Q6",
+                "answer_instruction": "Explain the purpose of the 'donor’s ID code' as mentioned in the document.",
+                "data_information_knowledge_and_context": "donor’s ID code means any number or other code used by an ART provider to identify the donor.",
+                "reasoning_justification_relevant": "This information is significant for maintaining confidentiality and proper tracking in donor conception processes."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is considered as 'donor's profile information' according to the Assisted Reproductive Technology Bill 2024?",
+                "question_id": "Q1",
+                "answer_instruction": "List the types of information categorized as 'donor's profile information'.",
+                "data_information_knowledge_and_context": "donor’s profile information means any of the following information about a donor that has been collected and kept by an ART provider and that does not identify the name or the date of birth of the donor— (a) information about the donor’s hobbies or interests; (b) information about the family history of the donor; (c) information about the education of the donor; (d) photos of the donor; (e) correspondence of the donor; (f) information about the psychological history of the donor that is not relevant medical history.",
+                "reasoning_justification_relevant": "Understanding what constitutes 'donor's profile information' is essential for compliance with the Assisted Reproductive Technology Bill and for protecting donor anonymity."
+            },
+            {
+                "question": "What is classified as 'identifying information' in the Assisted Reproductive Technology Bill 2024?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the elements included in 'identifying information'.",
+                "data_information_knowledge_and_context": "identifying information means information, other than contact information, that identifies the person to whom the information relates, and includes— (a) a name of the person; and (b) the date of birth of the person; and (c) for information about a donor-conceived person— (i) the place of birth of the person; and (ii) the name of any ART provider who carried out the donor conception ART procedure and the place where the procedure was carried out.",
+                "reasoning_justification_relevant": "Knowing what constitutes 'identifying information' helps ensure that privacy laws and guidelines are adhered to, particularly in the context of assisted reproductive technology."
+            },
+            {
+                "question": "What is included in 'non-identifying information' for a donor as per the Assisted Reproductive Technology Bill 2024?",
+                "question_id": "Q3",
+                "answer_instruction": "List the components of 'non-identifying information'.",
+                "data_information_knowledge_and_context": "non-identifying information means information, other than contact information, that does not identify the person to whom the information relates, and includes— (a) for information about a donor— (i) the donor’s ID code; and (ii) the donor’s year and place of birth; and (iii) the donor’s ethnicity; and (iv) the donor’s physical characteristics; and (v) the donor’s relevant medical history.",
+                "reasoning_justification_relevant": "Understanding 'non-identifying information' is crucial for maintaining donor anonymity while allowing for necessary data collection for medical and research purposes."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information is required to be included in the donor conception information register?",
+                "question_id": "Q1",
+                "answer_instruction": "List all the categories of information that must be included in the register according to the document.",
+                "data_information_knowledge_and_context": "The document states that the register must contain information required by division 3 to be included in the register.",
+                "reasoning_justification_relevant": "Understanding the required information for the donor conception register is crucial for ensuring compliance with legal standards and protecting the rights of donor-conceived individuals."
+            },
+            {
+                "question": "Who is responsible for establishing and maintaining the donor conception information register?",
+                "question_id": "Q2",
+                "answer_instruction": "Identify the entity or individual responsible as specified in the document.",
+                "data_information_knowledge_and_context": "The document specifies that the registrar must establish and maintain the register for the purposes of this part.",
+                "reasoning_justification_relevant": "Identifying the responsible party ensures accountability and proper management of sensitive information within the donor conception process."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What types of information must the registrar include in the register according to the Assisted Reproductive Technology Bill 2024?",
+                "question_id": "Q1",
+                "answer_instruction": "List the types of information that must be included in the register.",
+                "data_information_knowledge_and_context": "The registrar must include in the register information provided by ART providers under section 45, historical information provided by ART providers or others under section 46, and information voluntarily provided to the registrar by parties to a private donor conception procedure under section 47.",
+                "reasoning_justification_relevant": "Understanding the types of information required in the register is crucial for ensuring compliance with the Assisted Reproductive Technology Bill 2024 and maintaining accurate records for legal and procedural purposes."
+            },
+            {
+                "question": "In what forms can the register be maintained according to the document?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the forms in which the register can be maintained.",
+                "data_information_knowledge_and_context": "The register may be wholly or partly in the form of a computer database, in documentary form, or in another form the registrar considers appropriate.",
+                "reasoning_justification_relevant": "Knowing the acceptable forms for maintaining the register assists in the management and accessibility of the information, ensuring that it aligns with the technological and administrative capabilities of the registrar's office."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What relevant information is required for a donor conception ART procedure?",
+                "question_id": "Q1",
+                "answer_instruction": "List all relevant information as outlined in the document.",
+                "data_information_knowledge_and_context": "(2) Relevant information is the following— (a) the donor’s full name; (b) the donor’s contact information; (c) the donor’s date and place of birth; (d) the donor’s ethnicity and physical characteristics; (e) the donor’s relevant medical history; (f) the donor’s ID code; (g) the place where the donor’s gamete was originally obtained from the donor, if the information has been recorded and kept; (h) any donor’s profile information; (i) the full name and date of birth of the person who gave birth to the donor-conceived person as a result of the procedure and the full name and date of birth of any spouse of that person at the time of the procedure; (j) in the case of a procedure to which a surrogate was a party—the full name and date of birth of the intended parents; (k) the full name, the date and place of birth and sex of the donor-conceived person born as a result of the procedure; (l) the number of any donor-conceived siblings of the donor-conceived person, if the information has been recorded and kept; (m) if the procedure was carried out by an ART provider—the name of the provider and the place where the procedure was carried out; (n) any other information prescribed by regulation.",
+                "reasoning_justification_relevant": "Understanding the relevant information required for a donor conception ART procedure is essential for legal, medical, and ethical considerations."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is the penalty for failing to provide information regarding the birth of a donor-conceived person after an ART procedure?",
+                "question_id": "Q45_1",
+                "answer_instruction": "Provide the maximum penalty as stated in the document.",
+                "data_information_knowledge_and_context": "Maximum penalty—100 penalty units.",
+                "reasoning_justification_relevant": "Understanding the penalties ensures compliance with legal requirements by ART providers, highlighting the seriousness of information provision."
+            },
+            {
+                "question": "Within what time frame must an ART provider provide information after becoming aware of the birth of a donor-conceived person?",
+                "question_id": "Q45_2",
+                "answer_instruction": "Specify the time frame in months as stated in the document.",
+                "data_information_knowledge_and_context": "The information is required to be provided within 3 months after the ART provider becomes aware of the birth of the donor-conceived person.",
+                "reasoning_justification_relevant": "Timely information provision is crucial for maintaining updated records and ensuring regulatory compliance."
+            },
+            {
+                "question": "What information must an ART provider notify the registrar about if they no longer have possession of certain historical data?",
+                "question_id": "Q46_3",
+                "answer_instruction": "List the details that must be notified to the registrar as per the document.",
+                "data_information_knowledge_and_context": "The name and contact details of the person to whom the provider gave possession or control of the information.",
+                "reasoning_justification_relevant": "This ensures traceability and accountability in the management of sensitive historical information."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What is the penalty for not complying with subsection (2) or (3) regarding the loss or destruction of information?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide the maximum penalty specified in the document for non-compliance.",
+                "data_information_knowledge_and_context": "Maximum penalty—100 penalty units.",
+                "reasoning_justification_relevant": "Understanding the penalties for non-compliance helps ensure adherence to legal requirements, promoting ethical and responsible management of sensitive information."
+            },
+            {
+                "question": "What is the period specified for complying with subsection (2) or (3)?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the period specified for compliance as per the document.",
+                "data_information_knowledge_and_context": "The period of 6 months after the commencement of this section; or if the registrar is satisfied there is sufficient reason to extend the period—a longer period determined by the registrar on application or on the registrar’s own initiative.",
+                "reasoning_justification_relevant": "Knowing the compliance period is crucial for individuals and organizations to align their processes and ensure timely submission of required information."
+            },
+            {
+                "question": "Who can the registrar require to provide information under subsection (5)?",
+                "question_id": "Q3",
+                "answer_instruction": "List the persons who can be required by the registrar to provide information.",
+                "data_information_knowledge_and_context": "(a) a person named by an ART provider under subsection (3)(a) as a person to whom it gave possession or control of the information; (b) a person whom the registrar reasonably believes has possession or control of the information.",
+                "reasoning_justification_relevant": "Identifying the parties responsible for providing information helps in efficiently managing and retrieving necessary data as per legal mandates."
+            },
+            {
+                "question": "Who is considered an ART provider under this section?",
+                "question_id": "Q4",
+                "answer_instruction": "Explain who is included as an ART provider according to the document.",
+                "data_information_knowledge_and_context": "(a) a person who is no longer an ART provider but who had been an ART provider before the commencement of this section; and (b) a medical practitioner who carried out donor conception ART procedures before the commencement of this section as part of their medical practice.",
+                "reasoning_justification_relevant": "Clarifying the definition of an ART provider ensures all relevant parties understand their responsibilities and the scope of their legal obligations."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information can parties to a private donor conception procedure provide to the registrar?",
+                "question_id": "Q1",
+                "answer_instruction": "List all relevant information that the parties can provide to the registrar, including conditions and consents required.",
+                "data_information_knowledge_and_context": "The parties to a private donor conception procedure may provide the registrar with all or any relevant information relating to the birth of a donor-conceived person as a result of the procedure. (Section 47)",
+                "reasoning_justification_relevant": "Understanding the type of information that parties can voluntarily provide is crucial for transparency and ensuring the rights of donor-conceived individuals."
+            },
+            {
+                "question": "What is required for a party to provide information to the registrar if another party has died?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain the conditions under which information can be provided if a party has died, including consents and evidence required.",
+                "data_information_knowledge_and_context": "If any party has since died, the written consent of all the remaining parties to the procedure and evidence of the death of that party are required. (Section 47)",
+                "reasoning_justification_relevant": "This question addresses the legal requirements for information provision, which is significant for maintaining accurate records and respecting the rights of involved parties."
+            },
+            {
+                "question": "Who can access information in the donor conception information register?",
+                "question_id": "Q3",
+                "answer_instruction": "Identify who can apply to access information and under what conditions the registrar must provide this information.",
+                "data_information_knowledge_and_context": "A person referred to in column 1 of the following table may apply to the registrar for all or any of the information in the register stated in column 2 opposite the person. (Section 48)",
+                "reasoning_justification_relevant": "Access to information is a key aspect of privacy and transparency, making it important to understand who has the right to access this sensitive information."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information can a donor-conceived person who is 16 years or older request about the donor?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide details on both identifying and non-identifying information that can be requested, as well as the conditions under which contact information may be shared.",
+                "data_information_knowledge_and_context": "Column 1: Donor-conceived person who is 16 years or older. Column 2: Information that can be provided - donor information including identifying or non-identifying information and contact information (with consent).",
+                "reasoning_justification_relevant": "This question explores the rights and limitations for donor-conceived individuals seeking information about their donors, which is crucial for understanding personal and legal boundaries."
+            },
+            {
+                "question": "What conditions must be met for a donor-conceived person to obtain contact information about a donor-conceived sibling?",
+                "question_id": "Q2",
+                "answer_instruction": "Explain the requirement of consent from the sibling for sharing contact information.",
+                "data_information_knowledge_and_context": "Column 2: Donor-conceived sibling information - identifying information or contact information about a donor-conceived sibling (only with the consent of the sibling).",
+                "reasoning_justification_relevant": "Understanding the consent requirements for accessing sibling information is important for respecting privacy and legal rights."
+            },
+            {
+                "question": "What type of non-identifying information can a donor-conceived person obtain about their donor-conceived siblings?",
+                "question_id": "Q3",
+                "answer_instruction": "List the non-identifying information that can be provided, including the number of siblings.",
+                "data_information_knowledge_and_context": "Column 2: Non-identifying information about a donor-conceived sibling, including information about the number of donor-conceived siblings of the applicant.",
+                "reasoning_justification_relevant": "Non-identifying information helps donor-conceived individuals understand their biological background without infringing on privacy."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information can be provided to a donor about their donor-conceived offspring?",
+                "question_id": "Q1",
+                "answer_instruction": "Provide both identifying and non-identifying information about a donor-conceived offspring of the donor. Identifying information requires the consent of the offspring.",
+                "data_information_knowledge_and_context": "donor-conceived offspring information: identifying information or contact information about a donor-conceived offspring of the donor (but only with the consent of the offspring); non-identifying information about a donor-conceived offspring of the donor.",
+                "reasoning_justification_relevant": "This question is relevant to understand the rights and limitations of donors regarding access to information about their biological offspring, which is crucial for ethical considerations in assisted reproductive technology."
+            },
+            {
+                "question": "What information can a parent of a donor-conceived person request about the donor?",
+                "question_id": "Q2",
+                "answer_instruction": "Provide both identifying and non-identifying information about the donor. Identifying information requires the consent of the donor.",
+                "data_information_knowledge_and_context": "donor information: identifying information or contact information about the donor (but only with the consent of the donor); non-identifying information about the donor.",
+                "reasoning_justification_relevant": "Understanding what information parents of donor-conceived individuals can access about the donor is important for discussions on transparency and privacy in reproductive technology."
+            },
+            {
+                "question": "What information can be provided about a donor-conceived sibling?",
+                "question_id": "Q3",
+                "answer_instruction": "Provide both identifying and non-identifying information about a donor-conceived sibling. Identifying information requires the consent of the sibling.",
+                "data_information_knowledge_and_context": "donor-conceived sibling information: identifying information or contact information about a donor-conceived sibling of the donor-conceived person (but only with the consent of the sibling); non-identifying information about a donor-conceived sibling of the donor-conceived person.",
+                "reasoning_justification_relevant": "The ability to access sibling information touches on issues of identity and connection for donor-conceived individuals, making it a key area of interest in reproductive technology legislation."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What type of information can a descendant who is 16 years or older of a donor-conceived person request about the donor?",
+                "question_id": "Q1",
+                "answer_instruction": "List the types of information available for the descendant based on the document.",
+                "data_information_knowledge_and_context": "Descendant, who is 16 years or older, of a donor-conceived person can request donor information, including identifying or non-identifying information about the donor and contact information about the donor (with consent).",
+                "reasoning_justification_relevant": "This question is relevant for understanding the rights of donor-conceived individuals to access information about their biological origins, which can be important for personal, health, or legal reasons."
+            },
+            {
+                "question": "What information can be provided to a 16-year-old or older interstate donor-conceived person regarding their donor-conceived siblings?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the information available to the interstate donor-conceived person as outlined in the document.",
+                "data_information_knowledge_and_context": "Interstate donor-conceived person who is 16 years or older can receive donor-conceived sibling information, such as identifying or non-identifying information about a donor-conceived sibling with consent.",
+                "reasoning_justification_relevant": "Understanding what information interstate donor-conceived individuals can access about their siblings helps in addressing potential identity and family connection issues that may arise."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What information can be provided to the offspring of a donor who is not a donor-conceived person and is 16 years or older?",
+                "question_id": "Q1",
+                "answer_instruction": "List the types of information that can be shared with the offspring according to the document.",
+                "data_information_knowledge_and_context": "Offspring of a donor who is not a donor-conceived person and who is 16 years or older can receive 'donor-conceived sibling information', which includes identifying information or contact information about a donor-conceived sibling of the donor offspring (with the sibling's consent) and non-identifying information about a donor-conceived sibling of the donor offspring.",
+                "reasoning_justification_relevant": "This question is relevant to understanding the rights and information access of donor offspring as outlined in the document."
+            },
+            {
+                "question": "What are the requirements for a person to give consent for the provision of information?",
+                "question_id": "Q2",
+                "answer_instruction": "Detail the steps and conditions necessary for a person to provide consent as specified in the document.",
+                "data_information_knowledge_and_context": "The consent of a person to the provision of information must be given in advance, by notice to the registrar, state what information may be provided and to whom, specify how contact is to be made, be recorded, and can be varied or revoked by the person.",
+                "reasoning_justification_relevant": "Understanding the consent requirements is crucial to ensure compliance with legal standards regarding information sharing in the context of donor conception."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What must the registrar do if they have provided information requiring consent?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the steps the registrar must take to notify the person whose consent was required.",
+                "data_information_knowledge_and_context": "If the registrar has provided information that requires the consent of a person, the registrar must take reasonable steps to notify the person that the registrar has provided the information to another person.",
+                "reasoning_justification_relevant": "This question is relevant because it addresses the procedural obligations of the registrar when handling sensitive information, ensuring transparency and compliance with consent requirements."
+            },
+            {
+                "question": "When is the registrar not allowed to identify another person during notification?",
+                "question_id": "Q2",
+                "answer_instruction": "Describe the conditions under which the registrar must avoid identifying another person.",
+                "data_information_knowledge_and_context": "The registrar must not, when notifying a person under this section, identify the other person to whom the information has been provided unless the other person has consented to their identity being disclosed.",
+                "reasoning_justification_relevant": "Understanding this condition is important for protecting personal privacy and ensuring that information is shared in compliance with consent agreements."
+            },
+            {
+                "question": "Can the registrar provide statistical information to authorized entities?",
+                "question_id": "Q3",
+                "answer_instruction": "State whether the registrar is permitted to provide statistical or non-identifying information to authorized entities and under what circumstances.",
+                "data_information_knowledge_and_context": "The registrar may, on application by an authorized entity, provide the entity with statistical or other non-identifying information in the register.",
+                "reasoning_justification_relevant": "This question highlights the circumstances under which non-identifying information can be shared, which is crucial for maintaining privacy while allowing for necessary data sharing."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What authority does the registrar have to correct the register?",
+                "question_id": "Q52_1",
+                "answer_instruction": "Explain both the registrar's own initiative and application by individuals.",
+                "data_information_knowledge_and_context": "The registrar may correct the register on application by a person whose information is in the register or on the registrar’s own initiative.",
+                "reasoning_justification_relevant": "Understanding the registrar's authority ensures transparency and accountability in maintaining accurate records."
+            },
+            {
+                "question": "Can a person request the removal of identifying information from the register?",
+                "question_id": "Q52_2",
+                "answer_instruction": "Provide a detailed explanation based on the document.",
+                "data_information_knowledge_and_context": "A person cannot make an application for the removal of identifying or other information that is required to be included in the register.",
+                "reasoning_justification_relevant": "This question highlights privacy concerns and legal constraints on altering official records."
+            },
+            {
+                "question": "Is the registrar required to ensure the completeness of the register according to the Information Privacy Act 2009?",
+                "question_id": "Q52_3",
+                "answer_instruction": "State whether the registrar is required or not and explain why.",
+                "data_information_knowledge_and_context": "The registrar is not, despite the Information Privacy Act 2009 or any other law, required to ensure that the information in the register is accurate and complete.",
+                "reasoning_justification_relevant": "Understanding this limitation clarifies the extent of the registrar's responsibilities and legal obligations."
+            },
+            {
+                "question": "What protections are provided to someone who discloses information under section 46?",
+                "question_id": "Q53_1",
+                "answer_instruction": "List the types of liabilities from which the person is protected.",
+                "data_information_knowledge_and_context": "A person who, acting honestly and reasonably, provides information under section 46 is not liable, civilly, criminally or under an administrative process, for providing the information.",
+                "reasoning_justification_relevant": "This question is crucial to understanding legal protections for individuals providing sensitive information, ensuring compliance and security."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What defenses are available to a person providing information under this Act?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the defenses available to a person providing information as per subsection (2).",
+                "data_information_knowledge_and_context": "(2) Without limiting subsection (1)— (a) in a proceeding for defamation, the person has a defence of absolute privilege for publishing the information; and (b) if the person would otherwise be required to maintain confidentiality about the information under an Act, oath, or rule of law or practice, the person— (i) does not contravene the Act, oath or rule of law or practice by providing the information; and (ii) is not liable to disciplinary action for providing the information.",
+                "reasoning_justification_relevant": "Understanding the legal protections for individuals providing information ensures clarity on their rights and obligations, promoting transparency and compliance with the law."
+            },
+            {
+                "question": "What inquiries can the registrar conduct regarding information in the register?",
+                "question_id": "Q2",
+                "answer_instruction": "List the types of inquiries the registrar may conduct according to subsection (1).",
+                "data_information_knowledge_and_context": "54 Inquiries by registrar relating to information in register (1) The registrar may conduct an inquiry to find out— (a) whether information provided to the registrar under this part is correct; or",
+                "reasoning_justification_relevant": "Clarifying the scope of the registrar's inquiries helps ensure that the information in the register is accurate and reliable, which is crucial for maintaining the integrity of the system."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What actions can the registrar take if an application is made for information in the register but the information is incomplete?",
+                "question_id": "Q1",
+                "answer_instruction": "Explain the registrar's actions in the case of incomplete information in the register.",
+                "data_information_knowledge_and_context": "(5) If an application is made to the registrar for information in the register but the register does not contain the information or the information is incomplete, the registrar may share confidential or other information with an ART provider for the purpose of obtaining relevant information for inclusion in the register.",
+                "reasoning_justification_relevant": "Understanding the registrar's authority and processes for handling incomplete information is crucial for ensuring the integrity and completeness of the register."
+            },
+            {
+                "question": "What are the penalties for unauthorized access to or interference with the register?",
+                "question_id": "Q2",
+                "answer_instruction": "List the penalties for unauthorized access or interference with the register.",
+                "data_information_knowledge_and_context": "55 Unauthorised access to or interference with register (1) A person must not, without lawful authority— (a) access the register or information in the register; or (b) make, alter or delete any information in the register; or (c) interfere with the register in any other way. Maximum penalty—100 penalty units.",
+                "reasoning_justification_relevant": "Understanding the penalties for unauthorized actions is important for enforcing compliance and protecting sensitive information within the register."
+            },
+            {
+                "question": "Under what conditions can a person have lawful authority to access or alter the register?",
+                "question_id": "Q3",
+                "answer_instruction": "Describe the conditions under which a person may have lawful authority to access or alter the register.",
+                "data_information_knowledge_and_context": "(2) Without limiting subsection (1), a person has lawful authority to do something mentioned in that subsection if— (a) the person is doing the thing to carry out a function under this Act or another Act; or (b) the registrar has authorised the person to do the thing.",
+                "reasoning_justification_relevant": "Identifying conditions for lawful access ensures clarity on who can legally interact with the register, thus safeguarding against misuse."
+            }
+        ]
+    },
+    {
+        "items": [
+            {
+                "question": "What are the conditions under which a person can apply for a licence to provide ART services?",
+                "question_id": "Q1_ART_Licence_Conditions",
+                "answer_instruction": "List the conditions for applying for a licence as specified in the document.",
+                "data_information_knowledge_and_context": "A person may apply to the chief executive for a licence if the person has RTAC accreditation, is not prohibited by a notice under section 63, and satisfies any other prescribed requirements.",
+                "reasoning_justification_relevant": "Understanding the criteria for obtaining a licence is crucial for compliance and operational readiness in the field of assisted reproductive technology."
+            },
+            {
+                "question": "What must be included in the application for a licence to provide ART services?",
+                "question_id": "Q2_ART_Licence_Application_Requirements",
+                "answer_instruction": "Detail the required components of the application as outlined in the document.",
+                "data_information_knowledge_and_context": "The application must be in the approved form and include specific details as required by regulation.",
+                "reasoning_justification_relevant": "Ensuring completeness and accuracy in applications helps streamline the licensing process and prevents administrative delays."
+            }
+        ]
+    }
+]

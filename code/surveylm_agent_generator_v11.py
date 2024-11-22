@@ -370,6 +370,39 @@ column_mappings_path = '/Users/stevenbickley/stevejbickley/data_assorted/F000038
 # /Users/stevenbickley/stevejbickley/data_assorted/SurveyLM_Agent_Profile_Generator/CustomisedProfile_WVS_v2.xlsx
 # '/Users/stevenbickley/stevejbickley/data_assorted/WVS_TimeSeries_1981_2022_Stata_v3_0.csv'
 
+## QUICK NEW FUNCTIONS
+
+def subset_dataframe(df, columns_of_interest, control_columns, filter_dict=None, n=100, random=False, start=True):
+    """
+    Outputs a subset of the dataframe with specific columns and filters.
+    Parameters:
+    - df (pd.DataFrame): The input dataframe.
+    - columns_of_interest (list): List of core columns to include in the output.
+    - control_columns (list): List of additional control columns for filtering.
+    - filter_dict (dict): Dictionary with filtering conditions (e.g., {'Mode of data collection': 'Face-to-face'}).
+    - n (int): Number of rows to select (default=100).
+    - random (bool): Whether to randomly select rows (default=False).
+    - start (bool): Whether to select the first (True) or last (False) n rows (default=True).
+    Returns:
+    - pd.DataFrame: Subset dataframe with filtered rows and selected columns.
+    """
+    # Combine columns of interest and control columns
+    all_columns = columns_of_interest + control_columns
+    # Filter the dataframe based on filter_dict if provided
+    if filter_dict:
+        for col, val in filter_dict.items():
+            df = df[df[col] == val]
+    # Select rows
+    if random:
+        df_subset = df[all_columns].sample(n=n)
+    else:
+        if start:
+            df_subset = df[all_columns].head(n)
+        else:
+            df_subset = df[all_columns].tail(n)
+    return df_subset
+
+
 # Now read in the xlsx or csv file:
 # Note 1: agents_df.columns # View column names
 # Note 2: agents_df.columns.tolist() # View column names for datasets with > 30 columns
@@ -1017,6 +1050,13 @@ except:
 #pd.set_option('display.max_columns', None)
 #pd.set_option('display.width', 1000)
 #agents_df.head()
+#agents_df[agents_df['country_name']=='Australia']['Year survey'].unique() # array([1981, 1995, 2005, 2012, 2018])
+
+# Example usage
+#columns_of_interest = ['Sex', 'Age', 'Ethnic group', 'Highest educational level attained', 'Marital status', 'Employment status', 'Profession/job','Social class (subjective)','Scale of incomes','Self positioning in political scale','Religious denominations - major groups']
+#control_columns = ['Mode of data collection', 'Date interview', 'Year survey', 'country_name', 'Employment status - Respondent’s Spouse','Highest educational level attained - Respondent’s Father ISCED','Highest educational level attained - Respondent’s Mother ISCED','Respondent’s Father - Occupational group (when respondent was 14 years old)', "Respondent interested during interview", "Interview privacy", "Language in which interview was conducted"]
+#filter_dict = {'country_name': 'Australia', 'Year survey': 2018} # Apply filtering - 'Year survey': 2018, 'Mode of data collection': 'Face to face',
+#df_subset = subset_dataframe(agents_df, columns_of_interest, control_columns, filter_dict, n=100, random=False, start=True) # Subset the dataframe
 
 # Select the columns of interest - for example, see e.g., Hughes, Camden, Yangchen & College (2016) and Fassett, Wolcott, Harpe, McLaughlin (2022):
 # The "Core Set": Age, Gender Identity, Biological Sex, Ethnicity/Race, Education, Location/Geographic Data
@@ -1025,9 +1065,11 @@ except:
 
 # 1) Core Set
 #columns_of_interest = ['Sex','Age','Ethnic group','Highest educational level attained','country_name']
+columns_of_interest = ['Sex', 'Age', 'Ethnic group', 'Highest educational level attained', 'Marital status', 'Employment status'] # Core Set for MGuihot AIGHP and ART..
+
 
 # 2) Wider Set
-columns_of_interest = ['Sex','Age','Ethnic group','Highest educational level attained','country_name','How many children do you have','Language of the interview','Employment status','Profession/job','Social class (subjective)','Marital status','Scale of incomes','Self positioning in political scale','Religious denominations - major groups'] # Wider Set
+#columns_of_interest = ['Sex','Age','Ethnic group','Highest educational level attained','country_name', 'Marital status', 'Employment status', 'How many children do you have','Employment status','Profession/job','Social class (subjective)','Scale of incomes','Self positioning in political scale','Religious denominations - major groups'] # Wider Set
 # We are missing 'Disability Status/Diagnosis' and 'Sexual Identity/Orientation' from the World Values Survey (i.e. they do not collect this) but thankfully.. we can add this via the SurveyLM platform - e.g.g 'Disability Status/Diagnosis' we could do: 'Physical Disability', 'Mental Disability', 'Neurodivergent', 'Both mental and physical disability', 'No mental or physical disability', 'Prefer not to answer'
 # From Hughes, Camden, Yangchen & College (2016) for the 'Disability Status/Diagnosis' variable/column: 'No diagnosed disability or impairment','A  sensory impairment (vision or hearing)', 'A mobility impairment','A learning disability (e.g., ADHD, dyslexia)', 'A mental health disorder','A disability or impairment not listed above'
 # OR... From Fassett, Wolcott, Harpe, McLaughlin (2022) for the 'Disability Status/Diagnosis' variable/column: 'Blind or low vision', 'Deaf or hard of hearing', 'Mobility condition that affects walking', 'Mobility condition that does not affect walking', 'Speech or communication disorder', 'Traumatic or acquired brain injury', 'Anxiety', 'Attention deficit or hyperactivity disorder (ADD or ADHD)', 'Autism spectrum', 'Depression', 'Another mental health or developmental disability (schizophrenia, eating disorder, etc.)', 'Chronic medical condition (asthma, diabetes, Crohn's disease, etc.)', 'Learning disability', 'Intellectual disability', 'Disability or condition not listed'
