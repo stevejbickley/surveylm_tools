@@ -5,7 +5,7 @@ import pandas as pd
 ##### ------ DEFINE FUNCTIONS ------- ####
 
 # Function to generate pairwise combinations of baseline scenarios and treatment variations, and assign unique IDs
-def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variations, baseline_prefixes, treatment_prefixes, treatment_to_baseline_map, answer_instruction, output_filename):
+def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instruction, output_filename, treatment_to_baseline_map=None):
     """
     Generate all combinations of baseline scenarios and treatment variations with unique IDs and save them to an Excel file.
     Args:
@@ -13,15 +13,18 @@ def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variat
     - treatment_variations (list): List of treatment variations.
     - baseline_prefixes (list): List of short descriptors for each baseline scenario.
     - treatment_prefixes (list): List of short descriptors for each treatment variation.
-    - treatment_to_baseline_map (dict): A mapping of treatment prefixes to explicitly excluded baseline prefixes.
     - answer_instruction (str): The standardized answer instruction for all questions.
     - output_filename (str): The filename for the output Excel file.
+    - treatment_to_baseline_map (dict): A mapping of treatment prefixes to explicitly excluded baseline prefixes.
     """
     # Ensure prefixes match the scenarios and treatments
     if len(baseline_scenarios) != len(baseline_prefixes):
         raise ValueError("Number of baseline prefixes must match the number of baseline scenarios.")
     if len(treatment_variations) != len(treatment_prefixes):
         raise ValueError("Number of treatment prefixes must match the number of treatment variations.")
+    # Initialize the map as empty if None is provided
+    if treatment_to_baseline_map is None:
+        treatment_to_baseline_map = {}
     # Create a list of all combinations
     combinations = []
     for baseline_idx, baseline in enumerate(baseline_scenarios):
@@ -35,7 +38,7 @@ def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variat
         for treatment_idx, treatment in enumerate(treatment_variations):
             treatment_prefix = treatment_prefixes[treatment_idx]
             # Check if the treatment explicitly excludes the current baseline prefix
-            if treatment_to_baseline_map.get(treatment_prefix) and baseline_prefix in treatment_to_baseline_map[treatment_prefix]:
+            if treatment_prefix in treatment_to_baseline_map and baseline_prefix in treatment_to_baseline_map[treatment_prefix]:
                 continue
             # Combine baseline and treatment
             full_question = f"{baseline.rstrip('?')}, considering that {treatment}?"
@@ -69,7 +72,7 @@ treatment_variations = [
 # Define short descriptors for treatment variations
 treatment_prefixes = ["flexible_hours", "vacation_days", "financial_bonus"]
 
-# Define the treatment to baseline mappings
+# Define the treatment to baseline mappings for excluding certain treatment_prefixes from combining with certain baseline_prefixes
 treatment_to_baseline_map = {
     "flexible_hours": ["nurse_baseline"],  # Exclude nurses from this treatment
 }
