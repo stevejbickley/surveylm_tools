@@ -703,14 +703,14 @@ if __name__ == "__main__":
     password = os.getenv('SURVEYLM_PASSWORD')
     api_key = os.getenv('SURVEYLM_APIKEY')
     # Set parameters dictionary
-    parameters = {"batch_survey": True, "reset_parameters": False, "test_run": False, "test_q": 5,
+    parameters = {"batch_survey": False, "reset_parameters": False, "test_run": False, "test_q": 5,
                   "model": "GPT-3.5-Turbo",
                   "temperature_low": 0.00, "temperature_high": 0.00, "max_retries": 5,
-                  "agent_role": ["Person","Assistant"], "justification": ["Yes", "No"],
-                  "critic": ["No"],
-                  "agent_role_prob_dist": "0.8;0.2", "justification_prob_dist": "0.8;0.2"}
+                  "agent_role": ["Person"], "justification": ["Yes", "No"],
+                  "critic": ["No"]}
+    #              "agent_role_prob_dist": "0.8;0.2", "justification_prob_dist": "0.8;0.2"}
     # Setup the download path for the simulation outputs
-    download_path = CURR_PATH + "/simulation_outputs/"
+    download_path = CURR_PATH + "/data/simulations/"
     driver = setup_selenium(download_path)
     try:
         # Run for all files in the start_folder

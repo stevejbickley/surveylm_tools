@@ -686,7 +686,8 @@ nursing_scenarios = [
     "You are a nurse working in a hospital, and there is a shortage of staff due to a supply chain error that delayed the delivery of essential medical equipment, creating a backlog of patient care needs. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?",
     "You are a nurse working in a hospital, and there is a shortage of staff for a community health initiative, such as conducting free vaccinations for underserved populations. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?",
     "You are a nurse working in a hospital, and there is a shortage of staff due to a sudden flu outbreak affecting many of your colleagues. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?",
-    "You are a nurse working in a hospital, and there is a shortage of staff caused by organizational mismanagement, such as over-scheduling leave for multiple staff members at the same time. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?"
+    "You are a nurse working in a hospital, and there is a shortage of staff caused by organizational mismanagement, such as over-scheduling leave for multiple staff members at the same time. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?",
+    "You are a nurse working in a hospital, and there is a shortage of staff to provide specialized paediatric care for children in need. How many extra hours per week, above and beyond your normal working hours, would you offer to help your hospital deal with this problem?"
 ]
 
 # Define short prefixes/descriptors for the teacher scenarios
@@ -704,7 +705,8 @@ nursing_scenarios_prefixes = [
     "nurse_external_contractor",
     "nurse_community_project",
     "nurse_flu_outbreak",
-    "nurse_organisational_mismanagement"
+    "nurse_organisational_mismanagement",
+    "nurse_children_in_need"
 ]
 
 #len(nursing_scenarios) == len(nursing_scenarios_prefixes)
