@@ -35,7 +35,10 @@ survey_folder = "/Users/stevenbickley/stevejbickley/surveylm_tools/data/simulati
 
 
 # Define paths for the TEACHER survey files and metadata file
-teacher_survey_files = ["steve@panalogy-lab.com_completed_survey_data_1732614007.csv", "steve@panalogy-lab.com_completed_survey_data_1732678784.csv", "steve@panalogy-lab.com_completed_survey_data_1732574240_INCOMPLETE_CANCELLED_SLOW_RUN.csv"]
+teacher_survey_files = ["steve@panalogy-lab.com_completed_survey_data_1732614007.csv",
+                        "steve@panalogy-lab.com_completed_survey_data_1732678784.csv",
+                        "steve@panalogy-lab.com_completed_survey_data_1732574240_INCOMPLETE_CANCELLED_SLOW_RUN.csv",
+                        "steve@panalogy-lab.com_completed_survey_data_1733104523.csv"]
 teacher_survey_files = [survey_folder + file for file in teacher_survey_files]
 teacher_metadata_file = metadata_folder+"teacher_treatments_metadata.xlsx"
 
