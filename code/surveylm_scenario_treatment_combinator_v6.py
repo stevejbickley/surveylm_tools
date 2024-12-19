@@ -5,7 +5,7 @@ import pandas as pd
 ##### ------ DEFINE FUNCTIONS ------- ####
 
 # Function to generate pairwise combinations of baseline scenarios and treatment variations, and assign unique IDs
-def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instruction, output_filename, treatment_to_baseline_map=None):
+def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instruction, output_filename, treatment_to_baseline_map=None, joining_text=', considering that'):
     """
     Generate all combinations of baseline scenarios and treatment variations with unique IDs and save them to an Excel file.
     Args:
@@ -41,7 +41,7 @@ def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variat
             if treatment_prefix in treatment_to_baseline_map and baseline_prefix in treatment_to_baseline_map[treatment_prefix]:
                 continue
             # Combine baseline and treatment
-            full_question = f"{baseline.rstrip('?')}, considering that {treatment}?"
+            full_question = f"{baseline.rstrip('?')}{joining_text}{treatment}?"
             combinations.append({"question": full_question,
                                  "question id": f"{baseline_prefix}_{treatment_prefix}",
                                  "answer instruction": answer_instruction})
@@ -50,6 +50,63 @@ def generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variat
     # Save to Excel
     df.to_excel(output_filename, index=False)
     print(f"Combinations with IDs and instructions saved to {output_filename}")
+
+
+
+# Function to generate pairwise combinations of baseline scenarios and treatment variations, and assign unique IDs
+def generate_flexible_combinations_with_ids_to_excel(baseline_scenarios_start, baseline_scenarios_end, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instructions, output_filename, treatment_to_baseline_map=None, joining_text=', who '):
+    """
+    Generate all combinations of baseline scenarios and treatment variations with unique IDs and save them to an Excel file.
+    Args:
+    - baseline_scenarios (list): List of baseline scenarios.
+    - treatment_variations (list): List of treatment variations.
+    - baseline_prefixes (list): List of short descriptors for each baseline scenario.
+    - treatment_prefixes (list): List of short descriptors for each treatment variation.
+    - answer_instruction (str): The standardized answer instruction for all questions.
+    - output_filename (str): The filename for the output Excel file.
+    - treatment_to_baseline_map (dict): A mapping of treatment prefixes to explicitly excluded baseline prefixes.
+    """
+    # Ensure prefixes match the scenarios and treatments
+    if len(baseline_scenarios_start) != len(baseline_prefixes):
+        raise ValueError("Number of baseline prefixes must match the number of baseline scenarios.")
+    if len(treatment_variations) != len(treatment_prefixes):
+        raise ValueError("Number of treatment prefixes must match the number of treatment variations.")
+    if len(baseline_scenarios_start) != len(baseline_scenarios_end):
+        raise ValueError("Number of baseline scenario starts must match the number of baseline scenario ends.")
+    # Initialize the map as empty if None is provided
+    if treatment_to_baseline_map is None:
+        treatment_to_baseline_map = {}
+    # Create a list of all combinations
+    combinations = []
+    for baseline_idx, baseline_start in enumerate(baseline_scenarios_start):
+        baseline_prefix = baseline_prefixes[baseline_idx]
+        baseline_end = baseline_scenarios_end[baseline_idx]
+        answer_instruction = answer_instructions[baseline_idx]
+        # Add the baseline-only question
+        baseline_id = f"{baseline_prefix}_baseline_treatment"
+        combinations.append({"question": f"{baseline_start}. {baseline_end}",
+                             "question id": baseline_id,
+                             "answer instruction": answer_instruction})
+        # Add the baseline with each treatment variation
+        for treatment_idx, treatment in enumerate(treatment_variations):
+            treatment_prefix = treatment_prefixes[treatment_idx]
+            # Check if the treatment explicitly excludes the current baseline prefix
+            if treatment_prefix in treatment_to_baseline_map and baseline_prefix in treatment_to_baseline_map[treatment_prefix]:
+                continue
+            # Combine baseline and treatment
+            full_question = f"{baseline_start}{joining_text}{treatment}. {baseline_end}"
+            combinations.append({"question": full_question,
+                                 "question id": f"{baseline_prefix}_{treatment_prefix}",
+                                 "answer instruction": answer_instruction})
+    # Convert to a DataFrame
+    df = pd.DataFrame(combinations)
+    # Save to Excel
+    df.to_excel(output_filename, index=False)
+    print(f"Combinations with IDs and instructions saved to {output_filename}")
+
+
+
+
 
 ##### ------ MAIN CODE ------- ####
 
@@ -83,12 +140,12 @@ treatment_to_baseline_map = {
 answer_instruction = "Please write the number of extra hours per week you are willing to work as a numerical value, with a maximum of 2 decimal places."
 
 # Define the output file name
-output_filename = "./data/inputs/treatment_combinations/combinations_with_ids.xlsx"
+output_filename = "./data/inputs/treatment_combinations/combinations_with_ids_example.xlsx"
 
 # Generate combinations with IDs and save to Excel
 generate_combinations_with_ids_to_excel(baseline_scenarios, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instruction, output_filename, treatment_to_baseline_map)
 
-## ----- Actual Usage
+## ----- Project 1: Actual Usage for Teacher/Nurses Project
 
 # Teaching scenarios
 teaching_scenarios = [
@@ -1238,4 +1295,342 @@ generate_combinations_with_ids_to_excel(baseline_scenarios=teaching_scenarios, t
 # Generate nursing combinations with IDs and save to Excel
 generate_combinations_with_ids_to_excel(baseline_scenarios=nursing_scenarios, treatment_variations=nursing_treatment_variations, baseline_prefixes=nursing_scenarios_prefixes, treatment_prefixes=nursing_treatment_ids, answer_instruction=answer_instruction, output_filename=f"{output_filename}nurses.xlsx", treatment_to_baseline_map=None)
 
-##### ------ END OF CODE/SCRIPT ------- ####
+##### ------ END OF CODE/SCRIPT FOR PROJECT 1 ------- ####
+
+## ----- Project 2: Actual Usage for Disability & Classic Economic Games Project
+
+## ----- Example Usage
+
+# Define baseline scenarios starts
+baseline_scenarios_start = [
+    "You have been given an endowment of $10 USD to divide between yourself and another person (the Responder)",
+    "You have been given an endowment of $100 USD to divide between yourself and another person (the Responder)",
+    "You have been given an endowment of $1,000 USD to divide between yourself and another person (the Responder)",
+    "You have been given an endowment of $10,000 USD to divide between yourself and another person (the Responder)",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $100 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $1,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "Your task is to accept or reject the offer from another person (the Proposer) about allocating $10,000 USD between you and the Proposer",
+    "You have been given an endowment of $10 USD to divide between yourself and another person (the Trustee)",
+    "You have been given an endowment of $100 USD to divide between yourself and another person (the Trustee)",
+    "You have been given an endowment of $1,000 USD to divide between yourself and another person (the Trustee)",
+    "You have been given an endowment of $10,000 USD to divide between yourself and another person (the Trustee)",
+    "Your task is to allocate units between yourself and another person (the Trustor)", # Trustee 10units
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)", # Trustee 100units
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)", # Trustee 1000units
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)", # Trustee 10000units
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "Your task is to allocate units between yourself and another person (the Trustor)",
+    "You have been given an endowment of $10 USD to divide between yourself and another person (the Recipient)", # Dictator 10 units
+    "You have been given an endowment of $100 USD to divide between yourself and another person (the Recipient)",
+    "You have been given an endowment of $1,000 USD to divide between yourself and another person (the Recipient)",
+    "You have been given an endowment of $10,000 USD to divide between yourself and another person (the Recipient)",
+    "You are the Employer responsible for setting the hourly wage of another person (the Employee)"
+]
+# Define baseline scenarios ends
+baseline_scenarios_end = [
+    "Please indicate how many $USD (0-10) you offer to the Responder. The Responder will then make a decision whether to accept or reject this offer. If the Responder accepts your offer, they will get the units you offered to them, and you will keep the rest of the $10. If the Responder rejects your offer, both of you will get $0.", # Proposer
+    "Please indicate how many $USD (0-100) you offer to the Responder. The Responder will then make a decision whether to accept or reject this offer. If the Responder accepts your offer, they will get the units you offered to them, and you will keep the rest of the $100. If the Responder rejects your offer, both of you will get $0.",
+    "Please indicate how many $USD (0-1,000) you offer to the Responder. The Responder will then make a decision whether to accept or reject this offer. If the Responder accepts your offer, they will get the units you offered to them, and you will keep the rest of the $1,000. If the Responder rejects your offer, both of you will get $0.",
+    "Please indicate how many $USD (0-10,000) you offer to the Responder. The Responder will then make a decision whether to accept or reject this offer. If the Responder accepts your offer, they will get the units you offered to them, and you will keep the rest of the $10,000. If the Responder rejects your offer, both of you will get $0.",
+    "The Proposer has offered you $0 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?", # Responder
+    "The Proposer has offered $1 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered $3 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered $5 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered $7 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered $9 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered $10 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $0 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $10 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $30 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $50 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $70 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $90 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $100 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $0 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $100 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $300 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $500 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $700 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $900 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $1,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $0 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $1,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $3,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $5,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $7,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $9,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "The Proposer has offered you $10,000 USD. The Proposer would keep the rest. If you reject the offer, both of you will get $0. Do you accept or reject this offer?",
+    "Please indicate how many $USD (0-10) you offer to the Trustee. Any amount you send will be tripled before being given to the Trustee. The remaining amount will stay with you. Next, the Trustee will decide how much of the amount that they received (i.e. three times the amount sent by you) to send back to you. Your total payoff will be the sum of the amount you kept and the amount sent back to you by the Trustee.", # Trustor
+    "Please indicate how many $USD (0-100) you offer to the Trustee. Any amount you send will be tripled before being given to the Trustee. The remaining amount will stay with you. Next, the Trustee will decide how much of the amount that they received (i.e. three times the amount sent by you) to send back to you. Your total payoff will be the sum of the amount you kept and the amount sent back to you by the Trustee.",
+    "Please indicate how many $USD (0-1,000) you offer to the Trustee. Any amount you send will be tripled before being given to the Trustee. The remaining amount will stay with you. Next, the Trustee will decide how much of the amount that they received (i.e. three times the amount sent by you) to send back to you. Your total payoff will be the sum of the amount you kept and the amount sent back to you by the Trustee.",
+    "Please indicate how many $USD (0-10,000) you offer to the Trustee. Any amount you send will be tripled before being given to the Trustee. The remaining amount will stay with you. Next, the Trustee will decide how much of the amount that they received (i.e. three times the amount sent by you) to send back to you. Your total payoff will be the sum of the amount you kept and the amount sent back to you by the Trustee.",
+    "The Trustor has transferred you $1 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $3 USD. Now you can decide to send back any amount between $0 and $3 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.", # Trustee
+    "The Trustor has transferred you $3 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $9 USD. Now you can decide to send back any amount between $0 and $9 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $5 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $15 USD. Now you can decide to send back any amount between $0 and $15 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $7 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $21 USD. Now you can decide to send back any amount between $0 and $21 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $9 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $27 USD. Now you can decide to send back any amount between $0 and $27 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $10 USD of the initial $10 USD endowment. This amount was multiplied by 3, so you received between $30 USD. Now you can decide to send back any amount between $0 and $30 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $10 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $30 USD. Now you can decide to send back any amount between $0 and $30 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $30 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $90 USD. Now you can decide to send back any amount between $0 and $90 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $50 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $150 USD. Now you can decide to send back any amount between $0 and $150 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $70 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $210 USD. Now you can decide to send back any amount between $0 and $210 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $90 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $270 USD. Now you can decide to send back any amount between $0 and $270 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $100 USD of the initial $100 USD endowment. This amount was multiplied by 3, so you received between $300 USD. Now you can decide to send back any amount between $0 and $300 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $100 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $300 USD. Now you can decide to send back any amount between $0 and $300 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $300 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $900 USD. Now you can decide to send back any amount between $0 and $900 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $500 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $1,500 USD. Now you can decide to send back any amount between $0 and $1,500 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $700 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $2,100 USD. Now you can decide to send back any amount between $0 and $2,100 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $900 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $2,700 USD. Now you can decide to send back any amount between $0 and $2,700 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $1,000 USD of the initial $1,000 USD endowment. This amount was multiplied by 3, so you received between $3,000 USD. Now you can decide to send back any amount between $0 and $3,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $1,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $3,000 USD. Now you can decide to send back any amount between $0 and $3,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $3,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $9,000 USD. Now you can decide to send back any amount between $0 and $9,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $5,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $15,000 USD. Now you can decide to send back any amount between $0 and $15,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $7,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $21,000 USD. Now you can decide to send back any amount between $0 and $21,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $9,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $27,000 USD. Now you can decide to send back any amount between $0 and $27,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "The Trustor has transferred you $10,000 USD of the initial $10,000 USD endowment. This amount was multiplied by 3, so you received between $30,000 USD. Now you can decide to send back any amount between $0 and $30,000 USD to the Trustor. The Trustor has no influence over this decision and must accept whatever amount you choose to give.",
+    "Please indicate how many $USD (0-10) you offer to the Responder. You will keep the remainder of the endowment. The Recipient has no influence over this decision and must accept whatever amount you choose to give.",  # Dictator
+    "Please indicate how many $USD (0-100) you offer to the Responder. You will keep the remainder of the endowment. The Recipient has no influence over this decision and must accept whatever amount you choose to give.",
+    "Please indicate how many $USD (0-1,000) you offer to the Responder. You will keep the remainder of the endowment. The Recipient has no influence over this decision and must accept whatever amount you choose to give.",
+    "Please indicate how many $USD (0-10,000) you offer to the Responder. You will keep the remainder of the endowment. The Recipient has no influence over this decision and must accept whatever amount you choose to give.",
+    "Please decide on an offer for the Employee's wage relative to the industry average or fair market rate for this role at your company/organization.You may offer a wage between -10% (minimum wage) and any percentage above 0% (higher than the average rate) relative to the industry average at your company/organization. After you set the wage, the Employee will choose an effort level e from 0.1 (minimum) to 1.0 (maximum).  The Employee's payoff is Wage in Dollars − c(e), where c(e) is the cost of effort for Employee, and Wage in Dollars=Industry Average Wage x (1 + Wage Percentage Offered / 100). The Employee has a predefined cost function: c(e)= a x e^2 + b x e + c, where a, b, and c are coefficients specific to the Employee and are unknown/can only be estimated. These parameters determine how costly effort is for the Employee. In other words, the cost of effort always increases as effort rises, but the exact relationship between effort and cost is specific to each Employee and is unknown/can only be estimated. As the Employer, your payoff will be equal to (1 − Wage Percentage / 100) × P(e), where P(e) represents the productivity of Employee. Productivity varies for each Employee and their effort levels, calculated as P(e) = k x e, where k is the productivity coefficient for the Employee."  # Wage Setting
+]
+
+# Define short descriptors for baseline scenarios - Note: n=52 instead of n=101 with 0 to 100pct in 10pct jumps
+baseline_prefixes = [
+    "ultimatum_proposer_10total",
+    "ultimatum_proposer_100total",
+    "ultimatum_proposer_1000total",
+    "ultimatum_proposer_10000total",
+    "ultimatum_responder_10total_0pct",
+    "ultimatum_responder_10total_10pct",
+    "ultimatum_responder_10total_30pct",
+    "ultimatum_responder_10total_50pct",
+    "ultimatum_responder_10total_70pct",
+    "ultimatum_responder_10total_90pct",
+    "ultimatum_responder_10total_100pct",
+    "ultimatum_responder_100total_0pct",
+    "ultimatum_responder_100total_10tpct",
+    "ultimatum_responder_100total_30pct",
+    "ultimatum_responder_100total_50pct",
+    "ultimatum_responder_100total_70pct",
+    "ultimatum_responder_100total_90pct",
+    "ultimatum_responder_100total_100pct",
+    "ultimatum_responder_1000total_0pct",
+    "ultimatum_responder_1000total_10pct",
+    "ultimatum_responder_1000total_30pct",
+    "ultimatum_responder_1000total_50pct",
+    "ultimatum_responder_1000total_70pct",
+    "ultimatum_responder_1000total_90pct",
+    "ultimatum_responder_1000total_100pct",
+    "ultimatum_responder_10000total_0pct",
+    "ultimatum_responder_10000total_10pct",
+    "ultimatum_responder_10000total_30pct",
+    "ultimatum_responder_10000total_50pct",
+    "ultimatum_responder_10000total_70pct",
+    "ultimatum_responder_10000total_90pct",
+    "ultimatum_responder_10000total_100pct",
+    "trust_trustor_10total",
+    "trust_trustor_100total",
+    "trust_trustor_1000total",
+    "trust_trustor_10000total",
+    "trust_trustee_10total_10pct",
+    "trust_trustee_10total_30pct",
+    "trust_trustee_10total_50pct",
+    "trust_trustee_10total_70pct",
+    "trust_trustee_10total_90pct",
+    "trust_trustee_10total_100pct",
+    "trust_trustee_100total_10pct",
+    "trust_trustee_100total_30pct",
+    "trust_trustee_100total_50pct",
+    "trust_trustee_100total_70pct",
+    "trust_trustee_100total_90pct",
+    "trust_trustee_100total_100pct",
+    "trust_trustee_1000total_10pct",
+    "trust_trustee_1000total_30pct",
+    "trust_trustee_1000total_50pct",
+    "trust_trustee_1000total_70pct",
+    "trust_trustee_1000total_90pct",
+    "trust_trustee_1000total_100pct",
+    "trust_trustee_10000total_10pct",
+    "trust_trustee_10000total_30pct",
+    "trust_trustee_10000total_50pct",
+    "trust_trustee_10000total_70pct",
+    "trust_trustee_10000total_90pct",
+    "trust_trustee_10000total_100pct",
+    "dictator_10total",
+    "dictator_100total",
+    "dictator_1000total",
+    "dictator_10000total",
+    "wage_setting"
+]
+
+# Define the answer instructions for baseline scenarios
+answer_instructions = [
+    "Write the number of $USD offered to the Responder as an integer value.",
+    "Write the number of $USD offered to the Responder as an integer value.",
+    "Write the number of $USD offered to the Responder as an integer value.",
+    "Write the number of $USD offered to the Responder as an integer value.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Choose one of the following two options: I accept the Proposer's offer, I reject the Proposer's offer.",
+    "Write the number of $USD transferred to the Trustee as an integer value.",
+    "Write the number of $USD transferred to the Trustee as an integer value.",
+    "Write the number of $USD transferred to the Trustee as an integer value.",
+    "Write the number of $USD transferred to the Trustee as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD sent back to the Trustor as an integer value.",
+    "Write the number of $USD offered to the Recipient as an integer value.",
+    "Write the number of $USD offered to the Recipient as an integer value.",
+    "Write the number of $USD offered to the Recipient as an integer value.",
+    "Write the number of $USD offered to the Recipient as an integer value.",
+    "Write the wage set for the Employee as an integer percentage between -10% (minimum wage) and any value at or above 0% (the industry average or higher)."
+]
+
+# Check that the list lengths are all the same
+len(baseline_scenarios_start) == len(baseline_scenarios_end) == len(baseline_prefixes) == len(answer_instructions)
+
+# Define treatment variations
+treatment_variations = [
+    "is diagnosed with an Intellectual or Learning Disability (e.g., Intellectual Disability, Learning Disability)",
+    "is diagnosed with Autism Spectrum Disorder",
+    "is diagnosed with Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    "is diagnosed with Schizophrenia",
+    "is diagnosed with Bipolar Disorder",
+    "has a Physical Disability",
+    "is an Amputee",
+    "uses a wheelchair",
+    "has Complete Vision Impairment or Blindness",
+    "has Complete Hearing Impairment or Deafness",
+    "is experiencing Low Income levels",
+    "is currently Unemployed",
+    "is Retired/Elderly",
+    "is a Veteran",
+    "is struggling with a Substance Addiction",
+    "has a Criminal Record",
+    "is experiencing Food Insecurity",
+    "is currently Homeless"
+]
+
+# Define short descriptors for treatment variations
+treatment_prefixes = [
+    "intellectual_learning_disability",
+    "autism",
+    "adhd",
+    "schizophrenia",
+    "bipolar",
+    "physical_disability",
+    "amputee",
+    "wheelchair",
+    "blind",
+    "deaf",
+    "low_income",
+    "unemployed",
+    "elderly_retired",
+    "veteran",
+    "substance_addiction",
+    "criminal_record",
+    "food_insecurity",
+    "homeless"
+]
+
+# Check that the list lengths are all the same
+len(treatment_variations) == len(treatment_prefixes)
+
+# Define the output file name
+output_filename = "./data/inputs/treatment_combinations/combinations_with_ids_disability_econ_games.xlsx"
+
+# Generate combinations with IDs and save to Excel
+generate_flexible_combinations_with_ids_to_excel(baseline_scenarios_start, baseline_scenarios_end, treatment_variations, baseline_prefixes, treatment_prefixes, answer_instructions, output_filename, treatment_to_baseline_map=None, joining_text=', who ')
+
+
+##### ------ END OF CODE/SCRIPT FOR PROJECT 2 ------- ####
