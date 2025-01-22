@@ -23,6 +23,9 @@ pymupdf = "^1.24.10"
 openai = "^1.44.1"
 pillow = "^10.4.0"
 psycopg2 = "^2.9.9"
+psycopg = "^3.2.4"
+pypdf2 = "^3.0.1"
+fuzzywuzzy = "^0.18.0"
 
 
 [build-system]
