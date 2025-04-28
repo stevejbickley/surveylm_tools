@@ -1,4 +1,4 @@
-# SurveyLM-Agent-Profile-Generator
+# surveylm_tools
 
 ## Overview
 A Python-based tool for generating synthetic agent profiles for SurveyLM.
