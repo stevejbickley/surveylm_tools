@@ -7,8 +7,11 @@ The surveyLM_tools repository contains a set of Python-based utilities for gener
 These tools are designed to streamline the creation and management of:
 
 Synthetic agent profiles for SurveyLM simulations
+
 Scenario and treatment variations for experimental simulations
+
 Disaster event data extraction for generating simulation contexts
+
 Simulation output consolidation for analysis
 
 ## Preparation
